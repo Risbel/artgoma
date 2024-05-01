@@ -10,7 +10,7 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 const Carousel = () => {
   return (
-    <div className="py-8 bg-gray-800">
+    <div className="py-8 bg-[#1c1f24]">
       <div className="flex justify-center my-10">
         <H1Carousel />
       </div>

@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 const Circle = ({
   h,
   w,
@@ -7,6 +9,7 @@ const Circle = ({
   translateY,
   right = 0,
   left = 0,
+  shadow = "md",
 }: {
   h: number;
   w: number;
@@ -16,6 +19,7 @@ const Circle = ({
   translateY?: number;
   right?: number;
   left?: number;
+  shadow?: "sm" | "md" | "lg" | "xl" | "2xl";
 }) => {
   return (
     <div
@@ -27,7 +31,7 @@ const Circle = ({
         right: `${right}`,
         left: `${left}`,
       }}
-      className={`rounded-full relative`}
+      className={cn(`rounded-full relative`, `shadow-${shadow} shadow-black`)}
     ></div>
   );
 };

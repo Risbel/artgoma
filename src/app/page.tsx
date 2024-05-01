@@ -1,5 +1,6 @@
 import Navbar from "./components/navbar";
 import Carousel from "./components/sections/carousel";
+import Connect from "./components/sections/connect";
 import Hero from "./components/sections/hero";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
 
       <Hero />
       <Carousel />
+      <Connect />
     </main>
   );
 };
