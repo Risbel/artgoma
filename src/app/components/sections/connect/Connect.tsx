@@ -15,10 +15,10 @@ const Connect = () => {
           <div className="flex flex-1 justify-center">
             <H2Connect />
           </div>{" "}
-          <div className="absolute z-[100] right-0  translate-x-24 translate-y-24">
+          <div className="absolute z-[10] right-0  translate-x-24 translate-y-24">
             <Circle border={30} h={200} w={200} borderColor="#c70000" />
           </div>
-          <div className="absolute z-[100] right-0 bottom-16 -translate-x-16">
+          <div className="absolute z-[10] right-0 bottom-16 -translate-x-16">
             <Circle border={20} h={80} w={80} borderColor="#c70000" shadow="2xl" />
           </div>
         </div>
