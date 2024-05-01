@@ -1,0 +1,39 @@
+{
+  "images": [
+    {
+      "url": "/preview(1).webp",
+      "alt": "image 1",
+      "key": "image 1",
+      "width": 500,
+      "height": 1000
+    },
+    {
+      "url": "/preview(2).webp",
+      "alt": "image 2",
+      "key": "image 2",
+      "width": 500,
+      "height": 1000
+    },
+    {
+      "url": "/preview(3).png",
+      "alt": "image 3",
+      "key": "image 3",
+      "width": 500,
+      "height": 1000
+    },
+    {
+      "url": "/preview(4).png",
+      "alt": "image 4",
+      "key": "image 4",
+      "width": 500,
+      "height": 1000
+    },
+    {
+      "url": "/preview(5).png",
+      "alt": "image 5",
+      "key": "image 5",
+      "width": 500,
+      "height": 1000
+    }
+  ]
+}
