@@ -2,7 +2,7 @@ import React from "react";
 
 const GetInspiredText = () => {
   return (
-    <p className="text-4xl text-white">
+    <p className="text-2xl text-white">
       <span>
         ¡Explora el fascinante mundo de GoMA! Nuestro viaje te sumergirá en el ARTE, las historias y las emociones,
         todas cuidadosamente capturadas y expresadas por las manos de artistas visionarios.

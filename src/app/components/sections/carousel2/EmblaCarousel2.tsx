@@ -47,12 +47,12 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   }, [emblaApi, updateSlidesInView]);
 
   return (
-    <div className="max-w-full mx-auto">
+    <div className="max-w-[80%] mx-auto">
       <div ref={emblaRed}>
-        <div className="flex gap-32 -ml-slide-spacing">
+        <div className="flex gap-16 -ml-slide-spacing">
           {slides.map((img, i) => (
             <Image
-              className="h-[700px] w-[350px] rounded-xl"
+              className="h-[550px] w-[270px] rounded-xl"
               src={img.url}
               width={img.width}
               height={img.height}
