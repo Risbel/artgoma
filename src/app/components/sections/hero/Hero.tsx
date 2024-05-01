@@ -18,11 +18,6 @@ const Hero = () => {
       </Link>
       <div className="fixed z-40 top-4 left-32 h-16 w-24 bg-black/20 blur-md"></div>
 
-      <div className="fixed z-50 right-32 top-4">
-        <Navbar />
-      </div>
-      <div className="fixed z-20 h-14 w-1/2 right-0 bg-gradient-to-l from-black via-black to-transparent"></div>
-
       <Carousel />
 
       <div className="absolute z-20 h-screen w-full flex flex-col gap-4 items-center justify-end pb-16">
