@@ -28,8 +28,8 @@ const Circle = ({
         width: `${w}px`,
         border: `${border}px solid ${borderColor}`,
         transform: `translate(${translateX}px, ${translateY}px)`,
-        right: `${right}`,
-        left: `${left}`,
+        right: `${right}px`,
+        left: `${left}px`,
       }}
       className={cn(`rounded-full relative`, `shadow-${shadow} shadow-black`)}
     ></div>
