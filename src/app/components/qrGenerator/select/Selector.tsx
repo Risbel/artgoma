@@ -17,7 +17,11 @@ const Selector = memo(
         </SelectTrigger>
         <SelectContent>
           {collaborators.results.map((colab) => {
-            return <SelectItem value={colab.id}>{colab.name}</SelectItem>;
+            return (
+              <SelectItem key={colab.id} value={colab.id}>
+                {colab.name}
+              </SelectItem>
+            );
           })}
         </SelectContent>
       </Select>
