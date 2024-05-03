@@ -1,10 +1,9 @@
 import Image from "next/image";
-import ButtonConfirm from "./ButtonConfirm";
+import ButtonConfirm from "../../ButtonConfirm";
 import Carousel from "./Carousel";
 import H1hero from "./H1hero";
 import Link from "next/link";
 import Circle from "@/app/components/circle";
-import Navbar from "../../navbar";
 
 const Hero = () => {
   return (

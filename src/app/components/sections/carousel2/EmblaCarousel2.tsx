@@ -52,6 +52,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         <div className="flex gap-16 -ml-slide-spacing">
           {slides.map((img, i) => (
             <Image
+              key={img.key}
               className="h-[550px] w-[270px] rounded-xl"
               src={img.url}
               width={img.width}

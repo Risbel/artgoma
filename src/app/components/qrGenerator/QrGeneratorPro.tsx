@@ -65,8 +65,8 @@ const QrGeneratorPro = ({ collaborators }: { collaborators: ICollaborator }) => 
               className="bg-black p-1 absolute z-20 rounded-l-full"
               src={"/logo-artgoma.svg"}
               alt="Logo Goma"
-              width={60}
-              height={60}
+              width={50}
+              height={50}
             />
             <QRCode
               id="myqr"
