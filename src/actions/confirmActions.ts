@@ -1,40 +1,41 @@
 "use server";
-
-import { revalidateTag } from "next/cache";
 import { Person } from "@/app/confirm/components/GuestsInput";
 
 export const addConfirmations = async (e: FormData, inputList: Person[]) => {
-  const event = e.get("event")?.toString();
+  const collaborator = e.get("collaborator")?.toString();
   const first_name = e.get("first_name")?.toString();
   const last_name = e.get("last_name")?.toString();
   const phone = e.get("phone")?.toString();
   const email = e.get("email")?.toString();
   const address = e.get("address")?.toString();
   const company = e.get("company")?.toString();
+  const time = e.get("time")?.toString();
+  const date: any = e.get("date")?.toString();
   const companions: Person[] = inputList;
 
-  if (!first_name || !phone || !email) {
-    return;
+  const dayWeek = new Date(date).getDay();
+  if (dayWeek == 6) {
+    return { statusText: "error" };
   }
 
-  const newSubscription = {
-    event,
+  const newVisit = {
+    collaborator,
     first_name,
     last_name,
     phone,
     email,
+    time,
+    date,
     address,
     company,
     companions,
   };
 
-  await fetch(`https://artworld-api.myaipeople.com/api/subscriptions/`, {
+  await fetch(`https://artworld-api.myaipeople.com/api/visits/`, {
     method: "POST",
-    body: JSON.stringify(newSubscription),
+    body: JSON.stringify(newVisit),
     headers: {
       "Content-Type": "application/json",
     },
   });
-
-  revalidateTag("subscriptions");
 };

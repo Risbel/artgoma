@@ -2,13 +2,19 @@
 
 import { addConfirmations } from "@/actions/confirmActions";
 import { useRef, useState } from "react";
-import ConfirmButton from "./ConfirmButton";
 import GuestsInput, { Person } from "./GuestsInput";
 import { redirect } from "next/navigation";
+import TimeSelector from "./TimeSelector";
+import { DateSelector } from "./DateSelector";
+import { Button } from "@/components/ui/button";
+import { useFormStatus } from "react-dom";
+import { Loader2 } from "lucide-react";
 
 const FormConfirm = () => {
   const [inputList, setInputList] = useState<Person[]>([]);
   const ref = useRef<HTMLFormElement>(null);
+  const inputRef: any = useRef<HTMLInputElement>(null);
+  const { pending } = useFormStatus();
 
   return (
     <div className="flex flex-col border-2 p-4 md:p-6 rounded-xl border-red-600 bg-white backdrop-blur-3xl">
@@ -20,23 +26,27 @@ const FormConfirm = () => {
       <form
         ref={ref}
         action={async (formData) => {
-          await addConfirmations(formData, inputList);
+          const data = await addConfirmations(formData, inputList);
+          if (data?.statusText === "error") {
+            inputRef.current.focus();
+            return;
+          }
           ref.current?.reset();
           redirect("/");
         }}
         className="flex flex-col w-full"
       >
-        <input type="text" hidden defaultValue={"ba688a61-71bb-4677-b180-8d40f3c82796"} name="event" />
+        <input type="text" hidden defaultValue={localStorage.getItem("collaborator") ?? ""} name="collaborator" />
         <div className="flex gap-2">
           <div className="flex flex-col w-2/5">
             <label className="pl-2 text-xs text-primary" htmlFor="first_name">
               {/* {form.labels.firstName} */}
-              firstName
+              first name
             </label>
             <input
               required
-              className="border pl-2 py-1 rounded-md h-8 md:h-10 text-xs md:text-base text-[#383529] border-primary"
-              placeholder={"firstName"}
+              className="border pl-2 py-1 rounded-md h-6 md:h-8 text-xs md:text-base text-[#383529] border-primary"
+              placeholder={"first name"}
               min={2}
               type="text"
               name="first_name"
@@ -47,12 +57,12 @@ const FormConfirm = () => {
           <div className="flex flex-col flex-1">
             <label className="pl-2 text-xs text-primary" htmlFor="last_name">
               {/* {form.labels.lastName} */}
-              lastName
+              last name
             </label>
             <input
               required
-              className="border pl-2 py-1 rounded-md w-full h-8 md:h-10 text-xs md:text-base text-[#383529] border-primary"
-              placeholder={"lastName"}
+              className="border pl-2 py-1 rounded-md w-full h-6 md:h-8 text-xs md:text-base text-[#383529] border-primary"
+              placeholder={"last name"}
               min={2}
               type="text"
               name="last_name"
@@ -68,7 +78,7 @@ const FormConfirm = () => {
           </label>
           <input
             required
-            className="border pl-2 py-1 rounded-md w-full h-8 md:h-10 text-xs md:text-base text-[#383529] border-primary"
+            className="border pl-2 py-1 rounded-md w-full h-6 md:h-8 text-xs md:text-base text-[#383529] border-primary"
             placeholder={"email"}
             min={2}
             type="email"
@@ -84,7 +94,7 @@ const FormConfirm = () => {
           </label>
           <input
             required
-            className="border pl-2 py-1 rounded-md w-full h-8 md:h-10 text-xs md:text-base text-[#383529] border-primary"
+            className="border pl-2 py-1 rounded-md w-full h-6 md:h-8 text-xs md:text-base text-[#383529] border-primary"
             placeholder={"phone"}
             min={2}
             type="tel"
@@ -94,13 +104,30 @@ const FormConfirm = () => {
           />
         </div>
 
+        <div className="flex gap-2">
+          <div className="flex-1">
+            <label className="pl-2 text-xs text-primary" htmlFor="date">
+              {/* {form.labels.phone} */}
+              wath day do you preffer
+            </label>
+            <DateSelector inputRef={inputRef} />
+          </div>
+          <div className="flex-1">
+            <label className="text-xs text-primary" htmlFor="time">
+              {/* {form.labels.time} */}
+              wath time do you preffer
+            </label>
+            <TimeSelector />
+          </div>
+        </div>
+
         <div>
           <label className="pl-2 text-xs text-primary" htmlFor="address">
             {/* {form.labels.address} */}
             address
           </label>
           <input
-            className="border pl-2 py-1 rounded-md w-full h-8 md:h-10 text-xs md:text-base text-[#383529] border-primary"
+            className="border pl-2 py-1 rounded-md w-full h-6 md:h-8 text-xs md:text-base text-[#383529] border-primary"
             placeholder={"address"}
             min={2}
             type="text"
@@ -116,7 +143,7 @@ const FormConfirm = () => {
             company
           </label>
           <input
-            className="border pl-2 py-1 rounded-md w-full h-8 md:h-10 text-xs md:text-base text-[#383529] border-primary"
+            className="border pl-2 py-1 rounded-md w-full h-6 md:h-8 text-xs md:text-base text-[#383529] border-primary"
             placeholder={"company"}
             min={2}
             type="text"
@@ -127,7 +154,11 @@ const FormConfirm = () => {
         </div>
         <GuestsInput inputList={inputList} setInputList={setInputList} />
 
-        <ConfirmButton />
+        <Button className="my-2 bg-black/70 border-2 border-red-700 hover:bg-black/60 rounded-full p-2" type="submit">
+          <span className="font-semibold text-white">
+            {!pending ? `${"confirm"}` : <Loader2 className="animate-spin stroke-secondary" />}
+          </span>
+        </Button>
       </form>
     </div>
   );
