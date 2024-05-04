@@ -18,7 +18,7 @@ const Selector = memo(
         <SelectContent>
           {collaborators.results.map((colab) => {
             return (
-              <SelectItem key={colab.id} value={colab.id}>
+              <SelectItem key={colab.id} value={colab.code}>
                 {colab.name}
               </SelectItem>
             );
