@@ -6,15 +6,13 @@ import GuestsInput, { Person } from "./GuestsInput";
 import { redirect } from "next/navigation";
 import TimeSelector from "./TimeSelector";
 import { DateSelector } from "./DateSelector";
-import { Button } from "@/components/ui/button";
-import { useFormStatus } from "react-dom";
-import { Loader2 } from "lucide-react";
+import ButtonConfirm from "./ButtonConfirm";
 
 const FormConfirm = () => {
+  const [error, setError] = useState<string | null>(null);
   const [inputList, setInputList] = useState<Person[]>([]);
   const ref = useRef<HTMLFormElement>(null);
   const inputRef: any = useRef<HTMLInputElement>(null);
-  const { pending } = useFormStatus();
 
   return (
     <div className="flex flex-col border-2 p-4 md:p-6 rounded-xl border-red-600 bg-white backdrop-blur-3xl">
@@ -27,16 +25,24 @@ const FormConfirm = () => {
         ref={ref}
         action={async (formData) => {
           const data = await addConfirmations(formData, inputList);
-          if (data?.statusText === "error") {
+
+          if (data.error === "date") {
             inputRef.current.focus();
             return;
           }
+          if (data.error) {
+            setError("Unespected error");
+            return;
+          }
+
+          setError(null);
+
           ref.current?.reset();
           redirect("/");
         }}
         className="flex flex-col w-full"
       >
-        <input type="text" hidden defaultValue={localStorage.getItem("collaborator") ?? ""} name="collaborator" />
+        <input type="text" hidden defaultValue={localStorage?.getItem("collaborator") ?? ""} name="collaborator" />
         <div className="flex gap-2">
           <div className="flex flex-col w-2/5">
             <label className="pl-2 text-xs text-primary" htmlFor="first_name">
@@ -122,25 +128,9 @@ const FormConfirm = () => {
         </div>
 
         <div>
-          <label className="pl-2 text-xs text-primary" htmlFor="address">
-            {/* {form.labels.address} */}
-            address
-          </label>
-          <input
-            className="border pl-2 py-1 rounded-md w-full h-6 md:h-8 text-xs md:text-base text-[#383529] border-primary"
-            placeholder={"address"}
-            min={2}
-            type="text"
-            name="address"
-            id="address"
-            autoComplete="address-level1"
-          />
-        </div>
-
-        <div>
           <label className="pl-2 text-xs text-primary" htmlFor="company">
             {/* {form.labels.company} */}
-            company
+            company (optional)
           </label>
           <input
             className="border pl-2 py-1 rounded-md w-full h-6 md:h-8 text-xs md:text-base text-[#383529] border-primary"
@@ -154,11 +144,8 @@ const FormConfirm = () => {
         </div>
         <GuestsInput inputList={inputList} setInputList={setInputList} />
 
-        <Button className="my-2 bg-black/70 border-2 border-red-700 hover:bg-black/60 rounded-full p-2" type="submit">
-          <span className="font-semibold text-white">
-            {!pending ? `${"confirm"}` : <Loader2 className="animate-spin stroke-secondary" />}
-          </span>
-        </Button>
+        <ButtonConfirm />
+        <span className="text-red-600 text-sm text-center">{error}</span>
       </form>
     </div>
   );

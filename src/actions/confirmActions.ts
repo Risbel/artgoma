@@ -7,7 +7,6 @@ export const addConfirmations = async (e: FormData, inputList: Person[]) => {
   const last_name = e.get("last_name")?.toString();
   const phone = e.get("phone")?.toString();
   const email = e.get("email")?.toString();
-  const address = e.get("address")?.toString();
   const company = e.get("company")?.toString();
   const time = e.get("time")?.toString();
   const date: any = e.get("date")?.toString();
@@ -15,7 +14,7 @@ export const addConfirmations = async (e: FormData, inputList: Person[]) => {
 
   const dayWeek = new Date(date).getDay();
   if (dayWeek == 6) {
-    return { statusText: "error" };
+    return { error: "date" };
   }
 
   const newVisit = {
@@ -26,16 +25,23 @@ export const addConfirmations = async (e: FormData, inputList: Person[]) => {
     email,
     time,
     date,
-    address,
     company,
     companions,
   };
 
-  await fetch(`https://artworld-api.myaipeople.com/api/visits/`, {
-    method: "POST",
-    body: JSON.stringify(newVisit),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  try {
+    const res = await fetch(`https://artworld-api.myaipeople.com/api/visits/`, {
+      method: "POST",
+      body: JSON.stringify(newVisit),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const response = await res.json();
+    return response;
+  } catch (error) {
+    console.log(error);
+    return { error: `There was an error: ${error}` };
+  }
 };

@@ -7,13 +7,22 @@ const TimeSelector = () => {
         <SelectValue placeholder="Time" />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem className="hover:cursor-pointer hover:font-semibold" value="9:00am-12:00pm">
+        <SelectItem
+          className="hover:cursor-pointer hover:font-semibold"
+          value={new Date(new Date().setHours(9, 0, 0, 0)).toISOString().substr(11, 8)}
+        >
           9:00 am - 12:00 pm
         </SelectItem>
-        <SelectItem className="hover:cursor-pointer hover:font-semibold" value="12:00pm-3:00pm">
+        <SelectItem
+          className="hover:cursor-pointer hover:font-semibold"
+          value={new Date(new Date().setHours(12, 0, 0, 0)).toISOString().substr(11, 8)}
+        >
           12:00 pm - 3:00 pm
         </SelectItem>
-        <SelectItem className="hover:cursor-pointer hover:font-semibold" value="3:00pm-6:00pm">
+        <SelectItem
+          className="hover:cursor-pointer hover:font-semibold"
+          value={new Date(new Date().setHours(15, 0, 0, 0)).toISOString().substr(11, 8)}
+        >
           3:00 pm - 6:00 pm
         </SelectItem>
       </SelectContent>

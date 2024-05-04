@@ -26,7 +26,6 @@ export function DateSelector({ inputRef }: { inputRef: React.RefObject<HTMLInput
         name="date"
         id="date"
         required
-        value={selectedDate}
         onChange={handleChangeFecha}
         type="date"
         min={new Date().toISOString().split("T")[0]}
