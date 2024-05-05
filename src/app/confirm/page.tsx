@@ -3,8 +3,12 @@ import FormConfirm from "./components/FormConfirm";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import Circle from "../components/circle";
+import { cookies } from "next/headers";
 
 const Confirm = async () => {
+  const cookieStore = cookies();
+  const collaborator = cookieStore.get("collaborator");
+
   return (
     <div
       className="relative bg-repeat overflow-x-hidden w-full"
@@ -29,7 +33,7 @@ const Confirm = async () => {
         </div>
 
         <div className="flex w-screen justify-center items-start pt-20">
-          <FormConfirm />
+          <FormConfirm collaborator={collaborator?.value} />
         </div>
       </div>
     </div>
