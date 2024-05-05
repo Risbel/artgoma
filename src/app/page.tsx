@@ -2,6 +2,7 @@ import Navbar from "./components/navbar";
 import Carousel from "./components/sections/carousel";
 import Carousel2 from "./components/sections/carousel2/Carousel2";
 import Connect from "./components/sections/connect";
+import GetInTouch from "./components/sections/getInTouch";
 import GetInspired from "./components/sections/getInspired";
 import Hero from "./components/sections/hero";
 import Location from "./components/sections/location";
@@ -20,6 +21,7 @@ const Home = () => {
       <Carousel2 />
       <GetInspired />
       <Location />
+      <GetInTouch />
     </main>
   );
 };
