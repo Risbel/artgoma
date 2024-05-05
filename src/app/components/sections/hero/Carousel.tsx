@@ -46,7 +46,7 @@ const Carousel = () => {
             <button
               key={index}
               onClick={() => changeImage(index)}
-              className={`w-3 h-3 bg-white rounded-full cursor-pointer hover:scale-110 ${
+              className={`h-2 w-2 md:w-3 md:h-3 bg-white rounded-full cursor-pointer hover:scale-110 ${
                 index === currentImage ? "opacity-100" : "opacity-50"
               }`}
             ></button>

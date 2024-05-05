@@ -8,14 +8,25 @@ import Circle from "@/app/components/circle";
 const Hero = () => {
   return (
     <div className="relative h-screen">
-      <div className="fixed z-50 -translate-x-20 -translate-y-20">
-        <Circle h={180} w={180} border={40} borderColor="#ff0000" />
-      </div>
+      <Circle
+        color="border-red-600"
+        position="fixed"
+        z="z-50"
+        className={
+          "h-28 w-28 md:h-44 md:w-44 border-[25px] md:border-[32px] border-red-600 -translate-x-12 -translate-y-12 md:-translate-x-20 md:-translate-y-20"
+        }
+      />
 
       <Link href={"/"}>
-        <Image className="fixed z-50 top-6 left-32" src="/logo-artgoma.svg" alt="logo goma" width={80} height={80} />
+        <Image
+          className="fixed z-[60] top-4 left-[70px] md:top-6 md:left-32 h-12 w-12 md:h-20 md:w-20"
+          src="/logo-artgoma.svg"
+          alt="logo goma"
+          width={80}
+          height={80}
+        />
       </Link>
-      <div className="fixed z-40 top-4 left-32 h-16 w-24 backdrop-blur-sm bg-black/20 blur-md rounded-2xl overflow-hidden"></div>
+      <div className="fixed z-[55] top-4 left-[68px] md:top-8 md:left-32 h-12 w-14 md:h-16 md:w-[90px] backdrop-blur-sm bg-black/20 blur-md rounded-2xl overflow-hidden"></div>
 
       <Carousel />
 
