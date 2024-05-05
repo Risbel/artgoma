@@ -7,12 +7,14 @@ import { redirect } from "next/navigation";
 import TimeSelector from "./TimeSelector";
 import { DateSelector } from "./DateSelector";
 import ButtonConfirm from "./ButtonConfirm";
+import { useCookies } from "next-client-cookies";
 
 const FormConfirm = () => {
   const [error, setError] = useState<string | null>(null);
   const [inputList, setInputList] = useState<Person[]>([]);
   const ref = useRef<HTMLFormElement>(null);
   const inputRef: any = useRef<HTMLInputElement>(null);
+  const cookies = useCookies();
 
   return (
     <div className="flex flex-col border-2 p-4 md:p-6 rounded-xl border-red-600 bg-white backdrop-blur-3xl">
@@ -42,7 +44,7 @@ const FormConfirm = () => {
         }}
         className="flex flex-col w-full"
       >
-        <input type="text" hidden defaultValue={localStorage?.getItem("collaborator") ?? ""} name="collaborator" />
+        <input type="text" hidden defaultValue={cookies.get("collaborator") ?? ""} name="collaborator" />
         <div className="flex gap-2">
           <div className="flex flex-col w-2/5">
             <label className="pl-2 text-xs text-primary" htmlFor="first_name">

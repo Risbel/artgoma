@@ -41,9 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <CollaboratorProvider>
-        <body className={montserrat.className}>{children}</body>
-      </CollaboratorProvider>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }
