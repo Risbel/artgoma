@@ -2,6 +2,7 @@ import Navbar from "./components/navbar";
 import Carousel from "./components/sections/carousel";
 import Carousel2 from "./components/sections/carousel2/Carousel2";
 import Connect from "./components/sections/connect";
+import Footer from "./components/sections/footer";
 import GetInTouch from "./components/sections/getInTouch";
 import GetInspired from "./components/sections/getInspired";
 import Hero from "./components/sections/hero";
@@ -22,6 +23,7 @@ const Home = () => {
       <GetInspired />
       <Location />
       <GetInTouch />
+      <Footer />
     </main>
   );
 };
