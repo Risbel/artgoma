@@ -5,7 +5,7 @@ import { QRCode } from "react-qrcode-logo";
 import { Check, Copy, Download, Settings } from "lucide-react";
 import Selector from "./select/Selector";
 import Image from "next/image";
-import { ICollaborator } from "@/api/getCollaborators";
+import { ICollaborator } from "@/queries/getCollaborators";
 
 const QrGeneratorPro = ({ collaborators }: { collaborators: ICollaborator }) => {
   const [urlParams, setUrlParams] = useState({ collaborator: "" });

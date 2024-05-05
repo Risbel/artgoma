@@ -1,6 +1,6 @@
 import React from "react";
 import QrGeneratorPro from "./QrGeneratorPro";
-import { ICollaborator, getCollaborators } from "@/api/getCollaborators";
+import { ICollaborator, getCollaborators } from "@/queries/getCollaborators";
 
 const QrGenerator = async () => {
   const collaborators: ICollaborator = await getCollaborators();

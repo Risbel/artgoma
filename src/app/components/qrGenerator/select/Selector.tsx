@@ -1,4 +1,4 @@
-import { ICollaborator } from "@/api/getCollaborators";
+import { ICollaborator } from "@/queries/getCollaborators";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { memo } from "react";
 
