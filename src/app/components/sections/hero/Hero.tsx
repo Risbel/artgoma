@@ -15,7 +15,7 @@ const Hero = () => {
       <Link href={"/"}>
         <Image className="fixed z-50 top-6 left-32" src="/logo-artgoma.svg" alt="logo goma" width={80} height={80} />
       </Link>
-      <div className="fixed z-40 top-4 left-32 h-16 w-24 bg-black/20 blur-md"></div>
+      <div className="fixed z-40 top-4 left-32 h-16 w-24 backdrop-blur-sm bg-black/20 blur-md rounded-2xl overflow-hidden"></div>
 
       <Carousel />
 

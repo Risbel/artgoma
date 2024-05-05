@@ -6,7 +6,7 @@ import Circle from "../../circle";
 
 const Location = () => {
   return (
-    <div className="bg-[#1c1f24] pt-32">
+    <div id="contact" className="bg-[#1c1f24] pt-32">
       <div className="flex justify-between px-24">
         <H2Location />
         <Image width={400} height={240} src={"/explore.svg"} alt="explore word image font cursive" />

@@ -8,7 +8,7 @@ const GetInTouch = () => {
       <div className="flex justify-end px-32">
         <H2GetInTouch />
       </div>
-      <div className="flex justify-between px-32 pt-16">
+      <div className="flex justify-between pl-16 pr-32 pt-16">
         <Image width={400} height={100} src={"/Logo Goma horizontal.svg"} alt="Logo Goma horizontal" />
         <div className="flex flex-col">
           <div className="flex items-center border border-red-600 rounded-3xl overflow-hidden mb-4">

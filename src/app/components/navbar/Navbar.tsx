@@ -3,13 +3,13 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className="fixed z-50 right-32 top-4">
       <div className="flex gap-6">
-        <Link href="#get-inspire">
-          <span className="hover:text-red-400 text-red-600 text-xl">GET INSPIRE</span>
+        <Link href="#enjoy-live">
+          <span className="hover:text-red-400 text-red-600 text-xl">ENJOY LIVE</span>
         </Link>
-        <Link href="#about-us">
-          <span className="hover:text-red-400 text-red-600 text-xl">ABOUT</span>
+        <Link href="#conect">
+          <span className="hover:text-red-400 text-red-600 text-xl">CONNECT</span>
         </Link>
         <Link href="#get-inspired">
           <span className="hover:text-red-400 text-red-600 text-xl">INSPIRE</span>

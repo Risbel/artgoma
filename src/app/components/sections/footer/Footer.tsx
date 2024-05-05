@@ -2,7 +2,7 @@ import { Facebook, InstagramIcon, Mail, YoutubeIcon } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white p-4">
+    <footer className="bg-black text-white p-4 py-16">
       <div className="flex items-center justify-center space-x-4">
         <a target="_blank" rel="noopener noreferrer" href="mailto:info@artgoma.com">
           <Mail className="text-white h-6 w-6" />

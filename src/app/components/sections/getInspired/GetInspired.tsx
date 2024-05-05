@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const GetInspired = () => {
   return (
-    <div className="relative overflow-x-hidden bg-[#1c1f24]">
+    <div id="get-inspired" className="relative overflow-x-hidden bg-[#1c1f24]">
       <div className="h-full flex items-center absolute -translate-x-36">
         <Circle border={40} h={250} w={250} borderColor="#dc0101" />
       </div>
