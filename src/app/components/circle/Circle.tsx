@@ -15,8 +15,8 @@ const Circle = ({
   w: number;
   border: number;
   borderColor: string;
-  translateX?: number;
-  translateY?: number;
+  translateX?: string;
+  translateY?: string;
   right?: number;
   left?: number;
   shadow?: "sm" | "md" | "lg" | "xl" | "2xl";
@@ -27,11 +27,10 @@ const Circle = ({
         height: `${h}px`,
         width: `${w}px`,
         border: `${border}px solid ${borderColor}`,
-        transform: `translate(${translateX}px, ${translateY}px)`,
         right: `${right}px`,
         left: `${left}px`,
       }}
-      className={cn(`rounded-full relative`, `shadow-${shadow} shadow-black`)}
+      className={cn(`rounded-full relative`, `shadow-${shadow} shadow-black`, `${translateX} ${translateY}`)}
     ></div>
   );
 };

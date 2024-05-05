@@ -4,6 +4,7 @@ import Carousel2 from "./components/sections/carousel2/Carousel2";
 import Connect from "./components/sections/connect";
 import GetInspired from "./components/sections/getInspired";
 import Hero from "./components/sections/hero";
+import Location from "./components/sections/location";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Connect />
       <Carousel2 />
       <GetInspired />
+      <Location />
     </main>
   );
 };
