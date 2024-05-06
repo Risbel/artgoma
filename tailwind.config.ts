@@ -6,6 +6,15 @@ const config = {
   content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
+    backgroundSize: {
+      auto: "auto",
+      cover: "cover",
+      contain: "contain",
+      paternSm: "3rem",
+      paternMd: "4rem",
+      "50%": "50%",
+      "16": "4rem",
+    },
     container: {
       center: true,
       padding: "2rem",
