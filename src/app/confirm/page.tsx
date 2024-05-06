@@ -21,16 +21,32 @@ const Confirm = async () => {
         >
           <ChevronLeft className="group-hover:-translate-x-2 transition-transform duration-500" />
         </Link>
-        <div className="absolute -translate-x-16 -translate-y-16">
-          <Circle h={200} w={200} border={30} borderColor="#bb2d2d" />
-        </div>
-        <div className="absolute translate-x-16 -translate-y-16 right-0 bottom-0">
-          <Circle h={200} w={200} border={30} borderColor="#bb2d2d" />
-        </div>
+        <Circle
+          color="border-red-600"
+          position="absolute"
+          z="z-10"
+          className={
+            "h-32 w-32 md:h-44 md:w-44 border-[20px] md:border-[32px] border-red-600 -top-32 right-0 translate-x-16 translate-y-12"
+          }
+        />
 
-        <div className="absolute -translate-x-40 -translate-y-16 right-0 bottom-0">
-          <Circle h={100} w={100} border={20} borderColor="#bb2d2d" />
-        </div>
+        <Circle
+          color="border-red-600"
+          position="absolute"
+          z="z-10"
+          className={
+            "h-32 w-32 md:h-44 md:w-44 border-[20px] md:border-[32px] border-red-600 bottom-0 -left-32 translate-x-16 translate-y-12"
+          }
+        />
+
+        <Circle
+          color="border-red-600"
+          position="absolute"
+          z="z-10"
+          className={
+            "h-12 w-12 md:h-28 md:w-28 border-[15px] md:border-[25px] border-red-600/70 bottom-40 left-40 -translate-x-16 md:translate-x-16 translate-y-32 md:translate-y-12"
+          }
+        />
 
         <div className="flex w-screen justify-center items-start pt-20">
           <FormConfirm collaborator={collaborator?.value} />

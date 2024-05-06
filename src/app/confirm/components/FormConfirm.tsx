@@ -7,7 +7,6 @@ import { redirect } from "next/navigation";
 import TimeSelector from "./TimeSelector";
 import { DateSelector } from "./DateSelector";
 import ButtonConfirm from "./ButtonConfirm";
-import { useCookies } from "next-client-cookies";
 
 const FormConfirm = ({ collaborator }: { collaborator: string | undefined }) => {
   const [error, setError] = useState<string | null>(null);
@@ -16,7 +15,7 @@ const FormConfirm = ({ collaborator }: { collaborator: string | undefined }) => 
   const inputRef: any = useRef<HTMLInputElement>(null);
 
   return (
-    <div className="flex flex-col border-2 p-4 md:p-6 rounded-xl border-red-600 bg-white backdrop-blur-3xl">
+    <div className="relative z-50 flex flex-col border-2 p-4 md:p-6 rounded-xl border-red-600 bg-white backdrop-blur-3xl">
       <div className="flex flex-col w-full mb-4">
         {/* <p className="text-md md:text-2xl text-center text-primary">{form.title}</p> */}
         <p className="text-md md:text-2xl text-center">Reservar Golden Ticket</p>

@@ -7,19 +7,32 @@ export default function RootLayout({
 }>) {
   return (
     <div className="relative overflow-hidden bg-[#1c1f24] h-screen w-screen">
-      <div className="absolute -translate-x-16 -translate-y-16">
-        <Circle h={200} w={200} border={30} borderColor="#bd0000" />
-      </div>
-      <div className="absolute translate-x-16 translate-y-40">
-        <Circle h={80} w={80} border={20} borderColor="#bd0000" />
-      </div>
-      <div className="absolute -translate-y-4 -translate-x-40 bottom-0 right-0">
-        <Circle h={80} w={80} border={20} borderColor="#bd0000" />
-      </div>
-      <div className="absolute translate-x-16 translate-y-16 bottom-0 right-0">
-        <Circle h={200} w={200} border={30} borderColor="#bd0000" />
-      </div>
+      <Circle
+        color="border-red-600"
+        position="absolute"
+        z="z-10"
+        className={
+          "h-32 w-32 md:h-44 md:w-44 border-[20px] md:border-[32px] border-red-600 -top-32 right-0 translate-x-16 translate-y-12"
+        }
+      />
 
+      <Circle
+        color="border-red-600"
+        position="absolute"
+        z="z-10"
+        className={
+          "h-32 w-32 md:h-44 md:w-44 border-[20px] md:border-[32px] border-red-600 bottom-0 -left-32 translate-x-16 translate-y-12"
+        }
+      />
+
+      <Circle
+        color="border-red-600"
+        position="absolute"
+        z="z-10"
+        className={
+          "h-12 w-12 md:h-28 md:w-28 border-[15px] md:border-[25px] border-red-600/70 bottom-40 left-40 -translate-x-16 md:translate-x-16 translate-y-32 md:translate-y-12"
+        }
+      />
       <div className="relative h-full">{children}</div>
     </div>
   );
