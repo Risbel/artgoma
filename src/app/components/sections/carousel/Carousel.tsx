@@ -11,7 +11,7 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 const Carousel = () => {
   return (
     <div id="enjoy-live" className="py-8 bg-[#1c1f24]">
-      <div className="flex justify-center my-10">
+      <div className="flex justify-center my-8 md:my-10 px-6">
         <H1Carousel />
       </div>
 

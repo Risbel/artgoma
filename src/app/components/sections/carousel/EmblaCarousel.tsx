@@ -46,15 +46,16 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       .on("autoScroll:play", () => setIsPlaying(true))
       .on("autoScroll:stop", () => setIsPlaying(false))
       .on("reInit", () => setIsPlaying(autoScroll.isPlaying()));
+    toggleAutoplay();
   }, [emblaApi]);
 
   return (
-    <div className="embla">
+    <div className="max-w-full mx-auto">
       <div className="overflow-hidden" ref={emblaRef}>
-        <div className="embla__container">
+        <div className="flex">
           {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__number border-2 bg-black/60 border-red-600">
+            <div className="flex-none w-3/4 md:w-1/3 px-4" key={index}>
+              <div className="shadow-inner rounded-xl text-white flex items-center justify-center h-52 md:h-64 bg-black bg-opacity-60 border-2 bg-black/60 border-red-600">
                 <span className="text-white">{index + 1}</span>
               </div>
             </div>
@@ -63,7 +64,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       </div>
 
       <div className="flex w-full justify-between px-8 py-4">
-        <div className="flex gap-8">
+        <div className="flex items-center gap-8">
           <PrevButton onClick={() => onButtonAutoplayClick(onPrevButtonClick)} disabled={prevBtnDisabled} />
           <NextButton onClick={() => onButtonAutoplayClick(onNextButtonClick)} disabled={nextBtnDisabled} />
         </div>
@@ -73,7 +74,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           onClick={toggleAutoplay}
           type="button"
         >
-          <span className="text-xl text-white">{isPlaying ? "Stop" : "Start"}</span>
+          <span className="text-md text-white">{isPlaying ? "Stop" : "Start"}</span>
         </button>
       </div>
     </div>
