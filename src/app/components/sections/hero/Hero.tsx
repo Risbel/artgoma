@@ -11,7 +11,7 @@ const Hero = () => {
       <Circle
         color="border-red-600"
         position="fixed"
-        z="z-50"
+        z="z-[100]"
         className={
           "h-28 w-28 md:h-44 md:w-44 border-[25px] md:border-[32px] border-red-600 -translate-x-12 -translate-y-12 md:-translate-x-20 md:-translate-y-20"
         }

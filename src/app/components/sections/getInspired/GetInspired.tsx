@@ -7,13 +7,25 @@ import Image from "next/image";
 
 const GetInspired = () => {
   return (
-    <div id="get-inspired" className="relative overflow-x-hidden bg-[#1c1f24]">
-      <div className="h-full flex items-center absolute -translate-x-36">
-        <Circle border={40} h={250} w={250} borderColor="#dc0101" />
-      </div>
+    <div id="get-inspired" className="relative flex flex-col justify-center overflow-x-hidden bg-[#1c1f24]">
+      <Circle
+        color="border-red-600"
+        position="absolute"
+        z="z-40"
+        className={"h-28 w-28 md:h-52 md:w-52 border-[25px] md:border-[32px] border-red-600 -translate-x-10"}
+      />
+      <Circle
+        color="border-red-600"
+        position="absolute"
+        z="z-40"
+        className={
+          "h-16 w-16 md:h-20 md:w-20 border-[18px] md:border-[20px] border-red-600 translate-x-20 md:translate-x-64 opacity-35"
+        }
+      />
+
       <div className="flex items-end h-full">
         <Image
-          className="absolute -right-9 bottom-8"
+          className="absolute -right-9 bottom-8 opacity-25 lg:opacity-100"
           src={"/LogoGomaVertical.svg"}
           alt="vertical logo"
           height={700}
@@ -21,10 +33,10 @@ const GetInspired = () => {
         />
       </div>
 
-      <div className="text-center pt-32 pb-16">
+      <div className="text-center pt-16 md:pt-32 pb-8 md:pb-16">
         <H2GetInspired />
       </div>
-      <div className="relative z-20 flex flex-wrap px-32">
+      <div className="relative z-50 flex flex-wrap px-4 md:px-16 lg:px-32">
         <GetInspiredText />
         <GetInspiredCallToAction />
       </div>
