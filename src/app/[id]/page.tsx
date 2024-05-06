@@ -5,10 +5,10 @@ import VipDescription from "./components/VipDescription";
 
 const page = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-full gap-6">
+    <div className="flex flex-col justify-center items-center h-full gap-3 lg:gap-6 relative z-20">
       <H1Text />
       <H2Text />
-      <div className="m-5">
+      <div className="mt-4 md:m-5">
         <ButtonConfirm />
       </div>
       <VipDescription />
