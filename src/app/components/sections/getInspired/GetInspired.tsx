@@ -36,7 +36,7 @@ const GetInspired = () => {
       <div className="text-center pt-16 md:pt-32 pb-8 md:pb-16">
         <H2GetInspired />
       </div>
-      <div className="relative z-50 flex flex-wrap px-4 md:px-16 lg:px-32">
+      <div className="relative z-40 flex flex-wrap px-4 md:px-16 lg:px-32">
         <GetInspiredText />
         <GetInspiredCallToAction />
       </div>

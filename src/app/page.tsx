@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <main className="overflow-x-hidden">
       <Navbar />
-      <div className="hidden md:block fixed z-30 h-14 w-1/2 right-0 backdrop-blur-sm bg-gradient-to-l from-black via-black to-transparent rounded-l-full overflow-hidden"></div>
+      <div className="hidden md:block fixed z-50 h-14 w-1/2 right-0 backdrop-blur-sm bg-gradient-to-l from-black via-black to-transparent rounded-l-full overflow-hidden"></div>
 
       <Hero />
       <Carousel />
