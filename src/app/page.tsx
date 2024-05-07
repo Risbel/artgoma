@@ -1,5 +1,6 @@
 import Circle from "./components/circle";
 import Navbar from "./components/navbar";
+import DropdownNav from "./components/navbar/DropdownNav";
 import Carousel from "./components/sections/carousel";
 import Carousel2 from "./components/sections/carousel2/Carousel2";
 import Connect from "./components/sections/connect";
@@ -12,6 +13,10 @@ import Location from "./components/sections/location";
 const Home = () => {
   return (
     <main className="overflow-x-hidden">
+      <div className="block md:hidden">
+        <DropdownNav />
+      </div>
+
       <Navbar />
       <div className="hidden md:block fixed z-50 h-14 w-1/2 right-0 backdrop-blur-sm bg-gradient-to-l from-black via-black to-transparent rounded-l-full overflow-hidden"></div>
 

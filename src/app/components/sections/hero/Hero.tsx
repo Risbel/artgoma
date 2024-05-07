@@ -7,7 +7,7 @@ import Circle from "@/app/components/circle";
 
 const Hero = () => {
   return (
-    <div className="relative h-screen">
+    <div id="home" className="relative h-screen">
       <Circle
         color="border-red-600"
         position="fixed"
