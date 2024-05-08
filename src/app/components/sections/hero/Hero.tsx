@@ -30,7 +30,7 @@ const Hero = () => {
 
       <Carousel />
 
-      <div className="absolute z-20 h-screen w-full flex flex-col gap-4 items-center justify-end pb-16">
+      <div className="absolute z-50 h-screen w-full flex flex-col gap-4 items-center justify-end pb-24">
         <H1hero />
         <ButtonConfirm />
       </div>

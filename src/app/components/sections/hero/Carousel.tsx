@@ -24,7 +24,7 @@ const Carousel = () => {
   };
 
   return (
-    <>
+    <div>
       <div className="absolute items-center overflow-hidden z-10">
         {images &&
           images?.map((img, index) => (
@@ -40,7 +40,7 @@ const Carousel = () => {
             />
           ))}
       </div>
-      <div className="absolute z-50 flex justify-center items-center space-x-4 bottom-4 w-full">
+      <div className="absolute z-[60] flex justify-center items-center space-x-4 bottom-4 w-full">
         {images &&
           images.map((_, index) => (
             <button
@@ -52,7 +52,13 @@ const Carousel = () => {
             ></button>
           ))}
       </div>
-    </>
+      <div
+        style={{
+          background: `linear-gradient(to top, #000000, #00000080 , transparent, transparent)`,
+        }}
+        className="absolute z-50 h-5/6 w-screen bottom-0"
+      ></div>
+    </div>
   );
 };
 
