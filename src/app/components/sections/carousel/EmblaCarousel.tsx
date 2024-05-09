@@ -3,9 +3,16 @@ import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
 import { NextButton, PrevButton, usePrevNextButtons } from "./EmblaCarouselArrowButtons";
+import Image from "next/image";
 
 type PropType = {
-  slides: number[];
+  slides: {
+    url: string;
+    alt: string;
+    key: string;
+    width: number;
+    height: number;
+  }[];
   options?: EmblaOptionsType;
 };
 
@@ -53,10 +60,16 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     <div className="max-w-full mx-auto">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
-          {slides.map((index) => (
-            <div className="flex-none w-3/4 md:w-1/3 px-4" key={index}>
-              <div className="shadow-inner rounded-xl text-white flex items-center justify-center h-52 md:h-64 bg-black bg-opacity-60 border-2 bg-black/60 border-red-600">
-                <span className="text-white">{index + 1}</span>
+          {slides.map((slide) => (
+            <div className="flex-none w-3/4 md:w-5/12 lg:w-1/4 px-4" key={slide.key}>
+              <div className="rounded-xl flex items-center justify-center h-52 md:h-64 border-2 overflow-hidden border-red-600">
+                <Image
+                  className="object-cover w-full h-full"
+                  src={slide.url}
+                  alt={slide.alt}
+                  width={300}
+                  height={200}
+                />
               </div>
             </div>
           ))}
