@@ -1,0 +1,60 @@
+{
+  "histories": [
+    {
+      "url": "https://minio.myaipeople.com/api/v1/buckets/artgoma-landing/objects/download?preview=true&prefix=dmlkZW9jYXJvdXNlbDEubXA0&version_id=null",
+      "alt": "",
+      "format": "video/mp4",
+      "key": "image 1",
+      "width": 250,
+      "height": 350
+    },
+    {
+      "url": "https://minio.myaipeople.com/api/v1/buckets/artgoma-landing/objects/download?preview=true&prefix=dmlkZW9DYXJvdXNlbDIubXA0&version_id=null",
+      "alt": "",
+      "format": "video/mp4",
+      "key": "image 2",
+      "width": 250,
+      "height": 350
+    },
+    {
+      "url": "https://minio.myaipeople.com/api/v1/buckets/artgoma-landing/objects/download?preview=true&prefix=dmlkZW9DYXJvdXNlbDMubXA0&version_id=null",
+      "alt": "",
+      "format": "video/mp4",
+      "key": "image 3",
+      "width": 250,
+      "height": 350
+    },
+    {
+      "url": "https://minio.myaipeople.com/api/v1/buckets/artgoma-landing/objects/download?preview=true&prefix=dmlkZW9DYXJvdXNlbDQubXA0&version_id=null",
+      "alt": "",
+      "format": "video/mp4",
+      "key": "image 4",
+      "width": 250,
+      "height": 350
+    },
+    {
+      "url": "https://minio.myaipeople.com/api/v1/buckets/artgoma-landing/objects/download?preview=true&prefix=dmlkZW9DYXJvdXNlbDUubXA0&version_id=null",
+      "alt": "",
+      "format": "video/mp4",
+      "key": "image 5",
+      "width": 250,
+      "height": 350
+    },
+    {
+      "url": "https://minio.myaipeople.com/api/v1/buckets/artgoma-landing/objects/download?preview=true&prefix=dmlkZW9DYXJvdXNlbDYubXA0&version_id=null",
+      "alt": "",
+      "format": "video/mp4",
+      "key": "image 6",
+      "width": 250,
+      "height": 350
+    },
+    {
+      "url": "https://minio.myaipeople.com/api/v1/buckets/artgoma-landing/objects/download?preview=true&prefix=dmlkZW9DYXJvdXNlbDcubXA0&version_id=null",
+      "alt": "",
+      "format": "video/mp4",
+      "key": "image 7",
+      "width": 250,
+      "height": 350
+    }
+  ]
+}

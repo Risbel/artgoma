@@ -55,6 +55,13 @@
       "key": "image 8",
       "width": 500,
       "height": 1000
+    },
+    {
+      "url": "/carouselImage9.avif",
+      "alt": "image 9",
+      "key": "image 9",
+      "width": 500,
+      "height": 1000
     }
   ]
 }

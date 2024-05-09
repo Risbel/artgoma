@@ -10,6 +10,7 @@ type PropType = {
   slides: {
     url: string;
     alt: string;
+    format: string;
     key: string;
     width: number;
     height: number;
@@ -68,10 +69,6 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             }
           });
         }
-
-        const translate = diffToTarget * (-1 * tweenFactor.current) * 100;
-        const tweenNode = tweenNodes.current[slideIndex];
-        tweenNode.style.transform = `translateX(${translate}%)`;
       });
     });
   }, []);
@@ -94,15 +91,23 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     <div className="max-w-full mx-auto">
       <div className="overflow-hidden" ref={emblaRed}>
         <div className="flex">
-          {slides.map((image, index) => (
-            <div className="flex-none h-[420px] md:h-[500px] w-4/5 md:w-3/5 lg:w-[30%] px-4" key={index}>
-              <div className="embla__parallax">
-                <div className="embla__parallax__layer">
-                  <img
-                    className="embla__slide__img embla__parallax__img"
-                    src={`https://picsum.photos/600/350?v=${index}`}
-                    alt="Your alt text"
-                  />
+          {slides.map((historie, index) => (
+            <div
+              className="flex-none h-[420px] md:h-[500px] w-4/5 md:w-[45%] lg:w-[30%] px-2 md:px-4 lg:px-6"
+              key={index}
+            >
+              <div className="rounded-xl h-full overflow-hidden">
+                <div className="flex justify-center relative h-full w-full">
+                  <video
+                    className="h-full w-full object-cover z-[200]"
+                    controls
+                    autoPlay={true}
+                    loop
+                    width={historie.width}
+                    height={historie.height}
+                  >
+                    <source src={historie.url} type="video/mp4" />
+                  </video>
                 </div>
               </div>
             </div>

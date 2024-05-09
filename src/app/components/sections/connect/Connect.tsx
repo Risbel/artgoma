@@ -13,10 +13,10 @@ const Connect = () => {
       <div className="flex flex-col-reverse gap-16 md:flex-row items-center justify-around">
         <Image
           className="h-[274px] w-[320px] lg:h-[549px] lg:w-[640px]"
-          src="/banana.png"
+          src="/banana.avif"
           width={600}
           height={600}
-          alt="banana svg"
+          alt="banana"
         />
         <div className="relative z-50 flex flex-1 justify-center">
           <H2Connect />
