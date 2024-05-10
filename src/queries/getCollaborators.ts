@@ -3,7 +3,7 @@ import { revalidateTag } from "next/cache";
 export const getCollaborators = async () => {
   const res = await fetch(`https://artworld-api.myaipeople.com/api/collaborators/`, {
     next: {
-      tags: ["colaborators"],
+      tags: ["collaborators"],
       revalidate: 3600,
     },
   });
@@ -12,7 +12,7 @@ export const getCollaborators = async () => {
     throw new Error("Failed to fetch data");
   }
 
-  revalidateTag("colaborators");
+  revalidateTag("collaborators");
 
   const collaborators: ICollaborator = await res.json();
 
