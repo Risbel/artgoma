@@ -33,6 +33,11 @@ const DropdownNav = () => {
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem className="text-red-600">
+          <Link className="font-semibold" href="#histories">
+            HISTORIES
+          </Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem className="text-red-600">
           <Link className="font-semibold" href="#get-inspired">
             INSPIRE
           </Link>
