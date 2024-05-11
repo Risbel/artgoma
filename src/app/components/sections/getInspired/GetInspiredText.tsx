@@ -4,27 +4,27 @@ const GetInspiredText = () => {
   return (
     <p className="md:text-2xl text-white text-center md:text-start">
       <span>
-        ¡Explora el fascinante mundo de GoMA! Nuestro viaje te sumergirá en el ARTE, las historias y las emociones,
-        todas cuidadosamente capturadas y expresadas por las manos de artistas visionarios.
+        Explore the fascinating world of GoMA! Our journey will immerse you in ART, stories, and emotions, all carefully
+        captured and expressed by the hands of visionary artists.
       </span>
       <br />
       <br />
       <span>
-        Tu viaje en GoMA te llevará a través de ARTE, historias y emociones, capturadas y expresadas por las manos de
-        artistas visionarios. Apoyar y promover el arte canario es nuestro objetivo.
+        Your journey at GoMA will take you through ART, stories, and emotions, captured and expressed by the hands of
+        visionary artists. Supporting and promoting Canarian art is our goal.
       </span>
       <br />
       <br />
       <span>
-        El propósito es darle AYUDARLOS Y DAR VALOR a los artistas excepcionales A CONTINUAR SU LABOR ARTÍSTICA. Deja tu
-        aporte a la isla apoyando al talento local Buscamos germinar las semillas de la creatividad, fomentar el aprecio
-        por las artes visuales y construir puentes inquebrantables entre los creadores y la comunidad global de amantes
-        del arte.
+        The purpose is to HELP AND ADD VALUE to exceptional artists TO CONTINUE THEIR ARTISTIC WORK. Leave your
+        contribution to the island by supporting local talent. We aim to nurture the seeds of creativity, foster
+        appreciation for visual arts, and build unbreakable bridges between creators and the global community of art
+        lovers.
       </span>
       <br />
-      <br /> Cada aportación que hagas a través de GoMA es un apoyo directo al talento local, dejando tu huella en la
-      isla y fortaleciendo el tejido cultural de Canarias. ¡Únete a nosotros y deja tu aporte a la isla apoyando el
-      talento local!
+      <br /> Every contribution you make through GoMA is direct support for local talent, leaving your mark on the
+      island and strengthening the cultural fabric of the Canary Islands. Join us and leave your contribution to the
+      island by supporting local talent.
     </p>
   );
 };

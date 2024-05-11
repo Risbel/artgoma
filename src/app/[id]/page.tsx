@@ -5,7 +5,7 @@ import H1Text from "./components/H1Text";
 import H2Text from "./components/H2Text";
 import VipDescription from "./components/VipDescription";
 import Image from "next/image";
-import { X } from "lucide-react";
+import { Palette, X } from "lucide-react";
 
 const page = () => {
   return (
@@ -38,9 +38,10 @@ const page = () => {
 
         <Link
           href={"/"}
-          className="border px-4 py-2 inline-flex  items-center justify-center rounded-md animate-background-shine bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-gray-50  focus:ring-gray-400 focus:ring-offset-2"
+          className="border rounded-md pl-4 pr-6 py-2 gap-3 inline-flex items-center justify-between animate-background-shine bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-gray-50 focus:ring-gray-400 focus:ring-offset-2 hover:shadow-lg hover:shadow-red-950"
         >
-          <span className="text-white ">More about us</span>
+          <Palette stroke="white" />
+          <span className="text-white"> More about us</span>
         </Link>
       </div>
     </div>

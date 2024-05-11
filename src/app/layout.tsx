@@ -5,16 +5,16 @@ import "./globals.css";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Art GoMA",
+  title: "ArtGoMA",
   description: "Welcome to GoMa gallery! UNIQUE ART EXPERIENCE IN TENERIFE",
   keywords: ["Art Goma", "GoMA", "Arte en Tenerife", "Galería GoMA"],
   authors: [{ name: "Karen" }],
   creator: "Karen",
   openGraph: {
-    title: "Art GoMa",
-    description: "Welcome to GoMa gallery! UNIQUE ART EXPERIENCE IN TENERIFE",
+    title: "ArtGoMa",
+    description: "Welcome to GoMA gallery! UNIQUE ART EXPERIENCE IN TENERIFE",
     url: "https://artgoma.vercel.app",
-    siteName: "Art GoMA",
+    siteName: "ArtGoMA",
     images: [
       {
         url: "https://artgoma.vercel.app/bg-black-logo-goma.png  ",

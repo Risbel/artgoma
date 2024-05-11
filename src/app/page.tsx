@@ -17,7 +17,7 @@ const Home = () => {
         <DropdownNav />
       </div>
       <Navbar />
-      <div className="hidden md:block fixed z-[190] h-14 w-1/2 right-0 backdrop-blur-sm bg-gradient-to-l from-black via-black to-transparent rounded-l-full overflow-hidden"></div>
+      <div className="hidden md:block fixed z-[190] h-14 w-3/4 right-0 backdrop-blur-sm bg-gradient-to-l from-black via-black to-transparent rounded-l-full overflow-hidden"></div>
 
       <Hero />
       <Carousel />
