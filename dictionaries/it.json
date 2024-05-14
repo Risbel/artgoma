@@ -1,0 +1,96 @@
+{
+  "dropdown": {
+    "title": "Lingue",
+    "languages": ["Inglese", "Spagnolo", "Francese", "Italiano", "Russo", "Tedesco"]
+  },
+  "navbar": {
+    "nav": ["DIVERTITI DAL VIVO", "COLLEGATI", "STORIE", "ISPIRA", "CONTATTO"]
+  },
+  "home": {
+    "h1": "ESPERIENZA UNICA",
+    "button": "Conferma"
+  },
+  "enjoy": {
+    "h1": {
+      "span1": "DIVERTITI",
+      "span2": "DAL VIVO",
+      "span3": "PITURA"
+    }
+  },
+  "connect": {
+    "h1": {
+      "span1": "COLLEGATI",
+      "span2": "CON TENERIFE"
+    }
+  },
+  "inspire": {
+    "h1": {
+      "span1": "ISPIRATI",
+      "span2": "OTTIENI"
+    },
+    "text": {
+      "p1": "Esplora il mondo affascinante di GoMA! Il nostro viaggio ti immergerà nell'ARTE, nelle storie e nelle emozioni, il tutto accuratamente catturato ed espresso dalle mani di artisti visionari.",
+      "p2": "Il tuo viaggio a GoMA ti porterà attraverso l'ARTE, le storie e le emozioni, catturate ed espresse dalle mani di artisti visionari. Sostenere e promuovere l'arte canaria è il nostro obiettivo.",
+      "p3": "L'obiettivo è di AIUTARE E AGGIUNGERE VALORE a artisti eccezionali PER CONTINUARE IL LORO LAVORO ARTISTICO. Lascia il tuo contributo all'isola sostenendo il talento locale. Il nostro obiettivo è coltivare i semi della creatività, promuovere l'apprezzamento delle arti visive e costruire ponti indistruttibili tra creatori e la comunità globale degli amanti dell'arte.",
+      "p4": "Ogni contributo che fai attraverso GoMA è un supporto diretto al talento locale, lasciando il tuo segno sull'isola e rafforzando il tessuto culturale delle Isole Canarie. Unisciti a noi e lascia il tuo contributo all'isola sostenendo il talento locale."
+    },
+    "caption": {
+      "span1": "Unisciti a noi",
+      "normalText": "e lascia il tuo contributo all'isola sostenendo",
+      "span2": "il talento locale",
+      "span3": "!"
+    }
+  },
+  "contact": {
+    "h1": {
+      "span1": "SIAMO COSÌ",
+      "span2": "VICINI"
+    }
+  },
+  "getInTouch": {
+    "h1": {
+      "span1": "ENTRIAMO IN",
+      "span2": "CONTATTO"
+    },
+    "contact": "CONTATTACI"
+  },
+  "form": {
+    "linkBack": "Indietro",
+    "title": "Prenota il biglietto d'oro",
+    "labels": {
+      "firstName": "nome",
+      "lastName": "cognome",
+      "email": "email",
+      "phone": "telefono",
+      "day": "che giorno preferisci",
+      "time": "che ora preferisci",
+      "company": "azienda (opzionale)"
+    },
+    "placeHolder": {
+      "firstName": "nome",
+      "lastName": "cognome",
+      "email": "email",
+      "phone": "telefono",
+      "day": "",
+      "time": "ora",
+      "company": "azienda (opzionale)"
+    },
+    "buttons": {
+      "addCompanion": "Aggiungi accompagnatore/i",
+      "confirm": "Conferma"
+    }
+  },
+  "welcomePage": {
+    "h1": "INGRESSO VIP",
+    "h2": "ACCESSO GRATUITO",
+    "h3": "DIVERTITI CON LA PITTURA DAL VIVO",
+    "description": {
+      "p1": "L'INGRESSO VIP di cortesia significa: accesso completo alla Galleria d'Arte GOMA.",
+      "p2": "Goditi una visita guidata e un bicchiere di cava, un'esperienza unica attraverso l'arte."
+    },
+    "buttons": {
+      "confirm": "Conferma",
+      "more": "Scopri di più su di noi"
+    }
+  }
+}

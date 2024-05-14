@@ -1,21 +1,32 @@
 import { NextRequest, NextResponse } from "next/server";
 
+import { i18n } from "./configs/i18n.config";
+
+import { match as matchLocale } from "@formatjs/intl-localematcher";
+import Negotiator from "negotiator";
+import { verifyCollaboratorCode } from "./utils/verifyCollaboratorCode";
+
 const PUBLIC_FILE = /\.(.*)$/;
 
-const verifyRegex = (cadena: string) => {
-  const regex = /\/[a-zA-Z0-9]{5}$/;
+function getLocale(request: NextRequest): string | undefined {
+  // Negotiator expects plain object so we need to transform headers
+  const negotiatorHeaders: Record<string, string> = {};
+  request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
 
-  if (regex.test(cadena)) {
-    return true;
-  } else {
-    return false;
-  }
-};
+  // @ts-ignore locales are readonly
+  const locales: string[] = i18n.locales;
+  // Use negotiator and intl-localematcher to get best locale
+  let languages = new Negotiator({ headers: negotiatorHeaders }).languages();
 
-export const middleware = (req: NextRequest, res: NextResponse) => {
+  const locale = matchLocale(languages, locales, i18n.defaultLocale);
+  return locale;
+}
+
+export const middleware = (req: NextRequest) => {
   const { pathname } = req.nextUrl;
   const cookie = req.cookies.get("collaborator");
   const response = NextResponse.next();
+  const locale = getLocale(req);
 
   if (
     pathname.startsWith("/_next") || // exclude Next.js internals
@@ -26,7 +37,7 @@ export const middleware = (req: NextRequest, res: NextResponse) => {
     return NextResponse.next();
   }
 
-  const isCollaborator = verifyRegex(req.nextUrl.pathname);
+  const isCollaborator = verifyCollaboratorCode(req.nextUrl.pathname);
 
   if (isCollaborator) {
     if (!cookie) {
@@ -35,13 +46,21 @@ export const middleware = (req: NextRequest, res: NextResponse) => {
     }
   }
 
-  if (!isCollaborator && req.nextUrl.pathname !== "/") {
-    return NextResponse.rewrite(new URL("/404", req.url));
+  // Check if there is any supported locale in the pathname
+  const pathnameIsMissingLocale = i18n.locales.every(
+    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+  );
+
+  // Redirect if there is no locale
+  if (pathnameIsMissingLocale) {
+    // e.g. incoming request is /products
+    // The new URL is now /en-US/products
+    return NextResponse.redirect(new URL(`/${locale}${pathname.startsWith("/") ? "" : "/"}${pathname}`, req.url));
   }
 
   return response;
 };
 
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico|confirm|generate-qr).*)"],
+  matcher: ["/((?!studio|api|_next/static|_next/image|favicon.ico).*)"],
 };

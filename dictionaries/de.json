@@ -1,0 +1,96 @@
+{
+  "dropdown": {
+    "title": "Sprachen",
+    "languages": ["Englisch", "Spanisch", "Französisch", "Italienisch", "Russisch", "Deutsch"]
+  },
+  "navbar": {
+    "nav": ["LIVE GENIESSEN", "VERBINDEN", "GESCHICHTEN", "INSPIRIEREN", "KONTAKT"]
+  },
+  "home": {
+    "h1": "EINZIGARTIGE ERFAHRUNG",
+    "button": "Bestätigen"
+  },
+  "enjoy": {
+    "h1": {
+      "span1": "GENIESSEN",
+      "span2": "LIVE",
+      "span3": "MALEREI"
+    }
+  },
+  "connect": {
+    "h1": {
+      "span1": "VERBINDEN",
+      "span2": "MIT TENERIFFA"
+    }
+  },
+  "inspire": {
+    "h1": {
+      "span1": "HOLEN SIE SICH",
+      "span2": "INSPIRATION"
+    },
+    "text": {
+      "p1": "Erkunden Sie die faszinierende Welt von GoMA! Unsere Reise wird Sie in die KUNST, Geschichten und Emotionen eintauchen lassen, die alle sorgfältig von den Händen visionärer Künstler erfasst und ausgedrückt werden.",
+      "p2": "Ihre Reise bei GoMA wird Sie durch die KUNST, Geschichten und Emotionen führen, die von den Händen visionärer Künstler erfasst und ausgedrückt werden. Die Unterstützung und Förderung der kanarischen Kunst ist unser Ziel.",
+      "p3": "Ziel ist es, AUSNAHMEKÜNSTLERN ZU HELFEN UND WERT HINZUZUFÜGEN, damit sie ihre künstlerische Arbeit fortsetzen können. Hinterlassen Sie Ihren Beitrag zur Insel, indem Sie lokale Talente unterstützen. Wir möchten die Keime der Kreativität fördern, die Wertschätzung für die bildenden Künste steigern und unzerbrechliche Brücken zwischen Schöpfern und der globalen Gemeinschaft von Kunstliebhabern bauen.",
+      "p4": "Jeder Beitrag, den Sie über GoMA leisten, ist direkte Unterstützung für lokale Talente, hinterlässt Ihre Spuren auf der Insel und stärkt das kulturelle Gefüge der Kanarischen Inseln. Schließen Sie sich uns an und hinterlassen Sie Ihren Beitrag zur Insel, indem Sie lokale Talente unterstützen."
+    },
+    "caption": {
+      "span1": "Schließen Sie sich uns an",
+      "normalText": "und hinterlassen Sie Ihren Beitrag zur Insel, indem Sie",
+      "span2": "lokale Talente",
+      "span3": "unterstützen!"
+    }
+  },
+  "contact": {
+    "h1": {
+      "span1": "WIR SIND SO",
+      "span2": "NAH"
+    }
+  },
+  "getInTouch": {
+    "h1": {
+      "span1": "KOMMEN SIE IN",
+      "span2": "KONTAKT"
+    },
+    "contact": "KONTAKTIERE UNS"
+  },
+  "form": {
+    "linkBack": "Zurück",
+    "title": "Reservieren Sie Ihr Goldenes Ticket",
+    "labels": {
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "day": "Welchen Tag bevorzugen Sie",
+      "time": "Welche Zeit bevorzugen Sie",
+      "company": "Unternehmen (optional)"
+    },
+    "placeHolder": {
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "day": "",
+      "time": "Zeit",
+      "company": "Unternehmen (optional)"
+    },
+    "buttons": {
+      "addCompanion": "Begleiter hinzufügen",
+      "confirm": "Bestätigen"
+    }
+  },
+  "welcomePage": {
+    "h1": "VIP EINTRITT",
+    "h2": "KOSTENLOSER ZUGANG",
+    "h3": "GENIESSEN SIE LIVE-MALEREI",
+    "description": {
+      "p1": "VIP-Höflichkeits-EINTRITT bedeutet: voller Zugang zur GOMA-Kunstgalerie.",
+      "p2": "Genießen Sie eine geführte Tour und ein Glas Cava, eine einzigartige Erfahrung durch Kunst."
+    },
+    "buttons": {
+      "confirm": "Bestätigen",
+      "more": "Erfahren Sie mehr über uns"
+    }
+  }
+}

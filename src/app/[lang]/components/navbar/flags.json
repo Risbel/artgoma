@@ -1,0 +1,40 @@
+{
+  "flags": [
+    {
+      "src": "/flag-us.svg",
+      "alt": "icon flag language",
+      "width": 30,
+      "height": 25
+    },
+    {
+      "src": "/flag-es.svg",
+      "alt": "icon flag language",
+      "width": 30,
+      "height": 25
+    },
+    {
+      "src": "/flag-fr.svg",
+      "alt": "icon flag language",
+      "width": 30,
+      "height": 25
+    },
+    {
+      "src": "/flag-it.svg",
+      "alt": "icon flag language",
+      "width": 30,
+      "height": 25
+    },
+    {
+      "src": "/flag-ru.svg",
+      "alt": "icon flag language",
+      "width": 30,
+      "height": 25
+    },
+    {
+      "src": "/flag-de.svg",
+      "alt": "icon flag language",
+      "width": 30,
+      "height": 25
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "dropdown": {
+    "title": "Languages",
+    "languages": ["English", "Spanish", "French", "Italian", "Russian", "German"]
+  },
+  "navbar": {
+    "nav": ["ENJOY LIVE", "CONNECT", "STORIES", "INSPIRE", "CONTACT"]
+  },
+  "home": {
+    "h1": "UNIQUE EXPERIENCE",
+    "button": "Confirm"
+  },
+  "enjoy": {
+    "h1": {
+      "span1": "ENJOY",
+      "span2": "LIVE",
+      "span3": "PAINTING"
+    }
+  },
+  "connect": {
+    "h1": {
+      "span1": "CONNECT WITH",
+      "span2": "TENERIFE"
+    }
+  },
+  "inspire": {
+    "h1": {
+      "span1": "GET",
+      "span2": "INSPIRED"
+    },
+    "text": {
+      "p1": "Explore the fascinating world of GoMA! Our journey will immerse you in ART, stories, and emotions, all carefully captured and expressed by the hands of visionary artists.",
+      "p2": "Your journey at GoMA will take you through ART, stories, and emotions, captured and expressed by the hands of visionary artists. Supporting and promoting Canarian art is our goal.",
+      "p3": "The purpose is to HELP AND ADD VALUE to exceptional artists TO CONTINUE THEIR ARTISTIC WORK. Leave your contribution to the island by supporting local talent. We aim to nurture the seeds of creativity, foster appreciation for visual arts, and build unbreakable bridges between creators and the global community of art lovers.",
+      "p4": "Every contribution you make through GoMA is direct support for local talent, leaving your mark on the island and strengthening the cultural fabric of the Canary Islands. Join us and leave your contribution to the island by supporting local talent."
+    },
+    "caption": {
+      "span1": "Join us",
+      "normalText": "and leave your contribution to the island by sopporting",
+      "span2": "local talent",
+      "span3": "!"
+    }
+  },
+  "contact": {
+    "h1": {
+      "span1": "WE ARE SO",
+      "span2": "CLOSE"
+    }
+  },
+  "getInTouch": {
+    "h1": {
+      "span1": "LET'S GET IN",
+      "span2": "TOUCH"
+    },
+    "contact": "CONTACT US"
+  },
+  "form": {
+    "linkBack": "Back",
+    "title": "Reserve Golden Ticket",
+    "labels": {
+      "firstName": "first name",
+      "lastName": "last name",
+      "email": "email",
+      "phone": "phone",
+      "day": "wath day do you preffer",
+      "time": "wath time do you preffer",
+      "company": "company (optional)"
+    },
+    "placeHolder": {
+      "firstName": "first name",
+      "lastName": "last name",
+      "email": "email",
+      "phone": "phone",
+      "day": "",
+      "time": "time",
+      "company": "company (optional)"
+    },
+    "buttons": {
+      "addCompanion": "Add companion/s",
+      "confirm": "Confirm"
+    }
+  },
+  "welcomePage": {
+    "h1": "VIP ENTRY",
+    "h2": "FREE ACCESS",
+    "h3": "ENJOY LIVE PAINTING",
+    "description": {
+      "p1": "VIP courtesy ENTRY means: full access to the GOMA Art Gallery.",
+      "p2": "Enjoy a Guided tour and a glass of cava, unique experience through art."
+    },
+    "buttons": {
+      "confirm": "Confirm",
+      "more": "More about us"
+    }
+  }
+}
