@@ -1,3 +1,4 @@
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import React from "react";
 
 const VipDescription = ({
@@ -8,10 +9,30 @@ const VipDescription = ({
     p2: string;
   };
 }) => {
+  const text1Splited = text.p1.split(" ");
+  const wordsP1 = text1Splited.map((word, i) => {
+    if (word === word.toUpperCase()) {
+      return {
+        text: word,
+        className: "font-bold",
+      };
+    }
+    return {
+      text: word,
+    };
+  });
+
+  const text2Splited = text.p2.split(" ");
+  const wordsP2 = text2Splited.map((word, i) => {
+    return {
+      text: word,
+    };
+  });
+
   return (
     <div className="text-center py-6 px-8">
-      <p className="text-base lg:text-2xl text-white">{text.p1}</p>
-      <p className="text-base lg:text-2xl text-white">{text.p2}</p>
+      <TypewriterEffect words={wordsP1} />
+      <TypewriterEffect words={wordsP2} />
     </div>
   );
 };

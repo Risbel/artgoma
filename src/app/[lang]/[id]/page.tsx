@@ -8,6 +8,8 @@ import { X } from "lucide-react";
 import { Locale } from "@/configs/i18n.config";
 import { getDictionary } from "@/configs/dictionary";
 import NavbarDropdown from "../components/navbar/NavbarDropdown";
+import MoreAboutLink from "./components/MoreAboutLink";
+import BlackBox from "./components/BlackBox";
 
 const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   const { welcomePage } = await getDictionary(lang);
@@ -18,7 +20,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
       style={{ backgroundImage: "url(/paterngoma.png)" }}
     >
       <div className="absolute top-0 px-4 md:px-8 w-screen flex justify-between items-center">
-        <Link href={"/"}>
+        <Link href={`/${lang}`}>
           <Image className="h-12 w-12 md:h-20 md:w-20" src="/logo-artgoma.svg" alt="logo goma" width={80} height={80} />
         </Link>
         <div className="flex gap-4">
@@ -34,7 +36,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
         </div>
       </div>
 
-      <div className="absolute h-[400px] w-[400px] rotate-45 z-0 backdrop-blur-sm bg-black/20 shadow-lg shadow-red-900"></div>
+      <BlackBox />
       <div className="relative z-50 flex flex-col justify-center items-center">
         <H1Text text1={welcomePage.h1} text2={welcomePage.h2} />
         <H2Text text={welcomePage.h3} />
@@ -43,12 +45,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
         </div>
         <VipDescription text={welcomePage.description} />
 
-        <Link
-          href={"/"}
-          className="border rounded-md px-6 py-2 gap-3 inline-flex items-center justify-between animate-background-shine bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-gray-50 focus:ring-gray-400 focus:ring-offset-2 hover:shadow-lg hover:shadow-red-950"
-        >
-          <span className="text-white">{welcomePage.buttons.more}</span>
-        </Link>
+        <MoreAboutLink text={welcomePage.buttons.more} lang={lang} />
       </div>
     </div>
   );
