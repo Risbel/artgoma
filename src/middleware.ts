@@ -37,12 +37,11 @@ export const middleware = (req: NextRequest) => {
     return NextResponse.next();
   }
 
-  const isCollaborator = verifyCollaboratorCode(req.nextUrl.pathname);
+  const { collaborator, isCollaborator } = verifyCollaboratorCode(pathname);
 
-  if (isCollaborator) {
+  if (isCollaborator && collaborator) {
     if (!cookie) {
-      const collaboratorFromUrl = req.nextUrl.pathname.replace("/", "");
-      response.cookies.set("collaborator", collaboratorFromUrl);
+      response.cookies.set("collaborator", collaborator);
     }
   }
 
