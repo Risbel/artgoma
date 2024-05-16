@@ -36,7 +36,15 @@ const Hero = async ({ lang }: { lang: Locale }) => {
 
       <div className="absolute z-50 h-screen w-full flex flex-col gap-4 items-center justify-end pb-24">
         <H1hero text={home.h1} />
-        <ButtonConfirm text={home.button} lang={lang} />
+        <Link
+          href={`/${lang}/confirm`}
+          className="shadow-xl hover:shadow-red-950 transition-shadow duration-300 relative inline-flex h-12 overflow-hidden rounded-full p-[1.5px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50"
+        >
+          <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#ffc6c6_0%,#ff0505_50%,#ff9999_100%)]" />
+          <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gray-950 px-8 py-1 text-sm font-medium text-gray-50 backdrop-blur-3xl">
+            {home.button}
+          </span>
+        </Link>
       </div>
     </div>
   );

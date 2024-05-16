@@ -60,7 +60,7 @@ export const PrevButton: React.FC<PropType> = (props) => {
     <button
       type="button"
       {...restProps}
-      className="shadow-lg shadow-red-950  bg-black/50 hover:bg-black/10 p-1 md:p-2 rounded-full"
+      className=" shadow-md shadow-red-950 bg-black/50 hover:bg-black/10 p-1 md:p-2 rounded-full"
     >
       <ChevronLeft className="stroke-white md:h-8 md:w-8" />
       {children}
@@ -73,7 +73,7 @@ export const NextButton: React.FC<PropType> = (props) => {
 
   return (
     <button
-      className="shadow-lg shadow-red-950 bg-black/50 hover:bg-black/10 p-1 md:p-2 rounded-full"
+      className="shadow-md shadow-red-950 bg-black/50 hover:bg-black/10 p-1 md:p-2 rounded-full"
       type="button"
       {...restProps}
     >

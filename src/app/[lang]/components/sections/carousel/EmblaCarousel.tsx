@@ -63,7 +63,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         <div className="flex">
           {slides.map((slide) => (
             <div className="flex-none w-3/4 md:w-5/12 lg:w-1/4 px-4 mb-4" key={slide.key}>
-              <div className="rounded-xl flex items-center justify-center h-52 md:h-64 overflow-hidden shadow-lg shadow-red-950">
+              <div className="rounded-xl flex items-center justify-center h-52 md:h-64 overflow-hidden shadow-lg shadow-gray-800">
                 <Image
                   className="object-cover w-full h-full"
                   src={slide.url}
@@ -84,11 +84,13 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         </div>
 
         <button
-          className="px-3 bg-black/60 hover:bg-black/10 shadow-lg shadow-red-950 rounded-3xl"
+          className="px-1.5 md:px-4 bg-black/60 hover:bg-black/10 shadow-md shadow-red-950 rounded-3xl"
           onClick={toggleAutoplay}
           type="button"
         >
-          <span className="text-md text-white">{isPlaying ? <Pause /> : <Play />}</span>
+          <span className="text-md text-white">
+            {isPlaying ? <Pause className="h-5 w-5" /> : <Play className="h-5 w-5" />}
+          </span>
         </button>
       </div>
     </div>
