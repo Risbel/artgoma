@@ -1,36 +1,42 @@
 {
   "flags": [
     {
+      "lang": "en",
       "src": "/flag-us.svg",
       "alt": "icon flag language",
       "width": 30,
       "height": 25
     },
     {
+      "lang": "es",
       "src": "/flag-es.svg",
       "alt": "icon flag language",
       "width": 30,
       "height": 25
     },
     {
+      "lang": "fr",
       "src": "/flag-fr.svg",
       "alt": "icon flag language",
       "width": 30,
       "height": 25
     },
     {
+      "lang": "it",
       "src": "/flag-it.svg",
       "alt": "icon flag language",
       "width": 30,
       "height": 25
     },
     {
+      "lang": "ru",
       "src": "/flag-ru.svg",
       "alt": "icon flag language",
       "width": 30,
       "height": 25
     },
     {
+      "lang": "de",
       "src": "/flag-de.svg",
       "alt": "icon flag language",
       "width": 30,

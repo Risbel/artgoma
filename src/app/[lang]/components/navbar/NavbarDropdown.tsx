@@ -12,7 +12,7 @@ import Image from "next/image";
 
 import { i18n } from "@/configs/i18n.config";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import { useDictionary } from "@/providers/DictionaryProvider";
 import * as flagsObj from "./flags.json";
 import { LanguagesIcon } from "lucide-react";
@@ -21,6 +21,8 @@ const NavbarDropdown = () => {
   const pathName = usePathname();
   const { dropdown } = useDictionary();
   const { flags } = flagsObj;
+  const params = useParams();
+  const lang: any = params.lang;
 
   const redirectedPathName = (locale: string) => {
     if (!pathName) return "/";
@@ -29,10 +31,17 @@ const NavbarDropdown = () => {
     return segments.join("/");
   };
 
+  const actualFlag = flags.find((obj) => obj.lang == params.lang);
+
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="border-red-600 border rounded-full p-1 lg:px-1 bg-black/60 backdrop-blur-sm">
-        <LanguagesIcon stroke="white" className="p-[2px]" />
+      <DropdownMenuTrigger className="shadow shadow-red-900 rounded-md p-0.5 bg-black/60 backdrop-blur-sm">
+        <div className="flex items-center gap-2 px-2">
+          <span className="text-white">{lang && lang.toUpperCase()}</span>
+          {actualFlag && (
+            <Image src={actualFlag?.src} alt="flag" height={actualFlag?.height} width={actualFlag?.width} />
+          )}
+        </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="border-red-600 bg-black/60 backdrop-blur-sm translate-y-4">
         <DropdownMenuLabel className="text-primary-foreground">{dropdown.title}</DropdownMenuLabel>
