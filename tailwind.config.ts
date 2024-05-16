@@ -93,12 +93,17 @@ const config = {
             opacity: "0",
           },
         },
+        "loop-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
       },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "background-shine": "background-shine 4s linear infinite",
+        "loop-scroll": "loop-scroll 25s linear infinite",
       },
     },
   },

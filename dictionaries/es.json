@@ -12,21 +12,21 @@
   },
   "enjoy": {
     "h1": {
-      "span1": "DISFRUTA",
+      "span1": "ARTE",
       "span2": "EN VIVO",
-      "span3": "PINTURA"
+      "span3": ""
     }
   },
   "connect": {
     "h1": {
-      "span1": "CONECTAR",
+      "span1": "CONECTE",
       "span2": "CON TENERIFE"
     }
   },
   "inspire": {
     "h1": {
-      "span1": "OBTÉN",
-      "span2": "INSPIRACIÓN"
+      "span1": "INSPÍRATE",
+      "span2": "EN GoMA"
     },
     "text": {
       "p1": "¡Explora el fascinante mundo de GoMA! Nuestro viaje te sumergirá en el ARTE, las historias y las emociones, todo cuidadosamente capturado y expresado por las manos de artistas visionarios.",
@@ -49,10 +49,10 @@
   },
   "getInTouch": {
     "h1": {
-      "span1": "VAMOS A",
-      "span2": "COMUNICARNOS"
+      "span1": "CONTACTE",
+      "span2": "CON NOSOTROS"
     },
-    "contact": "CONTÁCTANOS"
+    "contact": "CONTÁCTENOS"
   },
   "form": {
     "linkBack": "Volver",
@@ -83,7 +83,7 @@
   "welcomePage": {
     "h1": "ENTRADA VIP",
     "h2": "ACCESO GRATUITO",
-    "h3": "DISFRUTA DE LA PINTURA EN VIVO",
+    "h3": "DISFRUTA EL ARTE EN VIVO",
     "description": {
       "p1": "La ENTRADA de cortesía VIP significa: acceso completo a la Galería de Arte GOMA.",
       "p2": "Disfruta de un recorrido guiado y una copa de cava, experiencia única a través del arte."

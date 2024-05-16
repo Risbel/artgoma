@@ -11,6 +11,7 @@ import GetInTouch from "./components/sections/getInTouch";
 import GetInspired from "./components/sections/getInspired";
 import Hero from "./components/sections/hero";
 import Location from "./components/sections/location";
+import LogoCarousel from "./components/carousel";
 
 const Home = ({ params: { lang } }: { params: { lang: Locale } }) => {
   return (
@@ -39,6 +40,7 @@ const Home = ({ params: { lang } }: { params: { lang: Locale } }) => {
         />
       </div>
       <Carousel2 />
+      <LogoCarousel />
       <GetInspired lang={lang} />
       <Location lang={lang} />
       <GetInTouch lang={lang} />
