@@ -1,8 +1,9 @@
 import React from "react";
 import Circle from "../components/circle";
 import Link from "next/link";
+import { Locale } from "@/configs/i18n.config";
 
-const page = () => {
+const page = ({ params: { lang } }: { params: { lang: Locale } }) => {
   return (
     <div className="relative overflow-hidden bg-black flex justify-center items-center h-screen">
       <Circle
@@ -32,9 +33,10 @@ const page = () => {
         }
       />
 
-      <div className="relative flex flex-col items-center gap-4">
-        <p className="text-white text-6">404 page not found</p>
-        <Link className="text-white text-6 border border-red-600 bg-white/20 p-3 rounded-full" href={"/"}>
+      <div className="relative flex flex-col items-center">
+        <p className="text-4xl text-white font-semibold">404 🫤</p>
+        <p className="text-white text-6">page not found</p>
+        <Link className="text-white text-6 border border-red-600 bg-white/20 p-3 mt-4 rounded-full" href={`/${lang}`}>
           Go home
         </Link>
       </div>

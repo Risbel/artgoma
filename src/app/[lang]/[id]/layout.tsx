@@ -1,6 +1,21 @@
-import { verifyCollaboratorCode } from "@/utils/verifyCollaboratorCode";
 import Circle from "../components/circle";
 import { redirect } from "next/navigation";
+
+const verifyCollaboratorCode = (cadena: string) => {
+  const regex = /^[a-zA-Z0-9]{5}$/;
+
+  if (regex.test(cadena)) {
+    return {
+      isCollaborator: true,
+      collaborator: cadena,
+    };
+  } else {
+    return {
+      isCollaborator: false,
+      collaborator: null,
+    };
+  }
+};
 
 export default function RootLayout({
   children,
@@ -12,7 +27,9 @@ export default function RootLayout({
     lang: string;
   };
 }>) {
-  if (!verifyCollaboratorCode(params.id)) {
+  const { isCollaborator } = verifyCollaboratorCode(params.id);
+
+  if (!isCollaborator) {
     redirect(`/${params.lang}/404`);
   }
 

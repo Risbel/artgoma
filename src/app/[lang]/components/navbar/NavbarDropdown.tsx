@@ -31,7 +31,7 @@ const NavbarDropdown = () => {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="border-red-600 border rounded-full p-1 lg:px-2 bg-black/60 backdrop-blur-sm">
+      <DropdownMenuTrigger className="border-red-600 border rounded-full p-1 lg:px-1 bg-black/60 backdrop-blur-sm">
         <LanguagesIcon stroke="white" className="p-[2px]" />
       </DropdownMenuTrigger>
       <DropdownMenuContent className="border-red-600 bg-black/60 backdrop-blur-sm translate-y-4">

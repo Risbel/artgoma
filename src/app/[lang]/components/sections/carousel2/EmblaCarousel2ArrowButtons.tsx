@@ -58,7 +58,7 @@ export const PrevButton: React.FC<PropType> = (props) => {
 
   return (
     <button
-      className="border-2 border-red-600 rounded-full p-4 -translate-x-4 bg-black/40 backdrop-blur-sm"
+      className="shadow-lg shadow-red-900 rounded-full p-4 -translate-x-4 bg-black/40 backdrop-blur-sm"
       type="button"
       {...restProps}
     >
@@ -73,7 +73,7 @@ export const NextButton: React.FC<PropType> = (props) => {
 
   return (
     <button
-      className="border-2 border-red-600 rounded-full p-4 translate-x-4  bg-black/40 backdrop-blur-sm"
+      className="shadow-lg shadow-red-900 rounded-full p-4 translate-x-4  bg-black/40 backdrop-blur-sm"
       type="button"
       {...restProps}
     >

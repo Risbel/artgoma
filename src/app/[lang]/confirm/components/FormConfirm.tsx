@@ -17,7 +17,7 @@ const FormConfirm = ({ collaborator }: { collaborator: string | undefined }) => 
   const { form } = useDictionary();
 
   return (
-    <div className="relative z-50 flex flex-col border-2 p-4 md:p-6 rounded-xl border-red-600 bg-white backdrop-blur-3xl">
+    <div className="relative z-50 flex flex-col p-4 md:p-6 rounded-xl bg-white backdrop-blur-3xl shadow-xl shadow-red-950">
       <div className="flex flex-col w-full mb-4">
         <p className="text-md md:text-2xl text-center">{form.title}</p>
       </div>

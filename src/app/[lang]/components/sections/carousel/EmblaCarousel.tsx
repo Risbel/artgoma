@@ -62,8 +62,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {slides.map((slide) => (
-            <div className="flex-none w-3/4 md:w-5/12 lg:w-1/4 px-4" key={slide.key}>
-              <div className="rounded-xl flex items-center justify-center h-52 md:h-64 border-2 overflow-hidden border-red-600">
+            <div className="flex-none w-3/4 md:w-5/12 lg:w-1/4 px-4 mb-4" key={slide.key}>
+              <div className="rounded-xl flex items-center justify-center h-52 md:h-64 overflow-hidden shadow-lg shadow-red-950">
                 <Image
                   className="object-cover w-full h-full"
                   src={slide.url}
@@ -84,7 +84,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         </div>
 
         <button
-          className="px-3 bg-black/60 hover:bg-black/10 border-2 border-red-600 rounded-3xl"
+          className="px-3 bg-black/60 hover:bg-black/10 shadow-lg shadow-red-950 rounded-3xl"
           onClick={toggleAutoplay}
           type="button"
         >
