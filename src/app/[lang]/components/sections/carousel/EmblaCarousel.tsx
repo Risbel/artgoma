@@ -5,9 +5,11 @@ import AutoScroll from "embla-carousel-auto-scroll";
 import { NextButton, PrevButton, usePrevNextButtons } from "./EmblaCarouselArrowButtons";
 import Image from "next/image";
 import { Pause, Play } from "lucide-react";
+import Video from "./Video";
 
 type PropType = {
   slides: {
+    video?: boolean;
     url: string;
     alt: string;
     key: string;
@@ -64,13 +66,17 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           {slides.map((slide) => (
             <div className="flex-none w-3/4 md:w-5/12 lg:w-1/4 px-4 mb-4" key={slide.key}>
               <div className="rounded-xl flex items-center justify-center h-52 md:h-64 overflow-hidden shadow-lg shadow-gray-800">
-                <Image
-                  className="object-cover w-full h-full"
-                  src={slide.url}
-                  alt={slide.alt}
-                  width={300}
-                  height={200}
-                />
+                {slide.video ? (
+                  <Video key={slide.key} slide={slide} />
+                ) : (
+                  <Image
+                    className="object-cover w-full h-full"
+                    src={slide.url}
+                    alt={slide.alt}
+                    width={300}
+                    height={200}
+                  />
+                )}
               </div>
             </div>
           ))}

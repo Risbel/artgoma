@@ -4,10 +4,8 @@ import { EmblaOptionsType } from "embla-carousel";
 import EmblaCarousel from "./EmblaCarousel";
 import H1Carousel from "./H1Carousel";
 import * as imagesObj from "./slides.json";
-import { Locale } from "@/configs/i18n.config";
 
 const OPTIONS: EmblaOptionsType = { loop: true };
-const SLIDE_COUNT = 8;
 
 const Carousel = () => {
   const { images } = imagesObj;
