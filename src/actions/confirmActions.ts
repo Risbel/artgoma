@@ -31,7 +31,7 @@ export const addConfirmations = async (e: FormData, inputList: Person[]) => {
   };
 
   try {
-    const res = await fetch(`https://artworld-api.myaipeople.com/api/visits/`, {
+    const res = await fetch(`https://artgoma-api.myaipeople.com/api/visits/`, {
       method: "POST",
       body: JSON.stringify(newVisit),
       headers: {

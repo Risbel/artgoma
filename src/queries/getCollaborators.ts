@@ -1,7 +1,7 @@
 import { revalidateTag } from "next/cache";
 
 export const getCollaborators = async () => {
-  const res = await fetch(`https://artworld-api.myaipeople.com/api/collaborators/`, {
+  const res = await fetch(`https://artgoma-api.myaipeople.com/api/collaborators/`, {
     next: {
       tags: ["collaborators"],
       revalidate: 3600,

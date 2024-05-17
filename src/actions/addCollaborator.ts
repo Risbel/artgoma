@@ -24,7 +24,7 @@ export const addCollaborator = async (e: FormData) => {
   };
 
   try {
-    const res = await fetch(`https://artworld-api.myaipeople.com/api/collaborators/`, {
+    const res = await fetch(`https://artgoma-api.myaipeople.com/api/collaborators/`, {
       method: "POST",
       body: JSON.stringify(newCollaborator),
       headers: {

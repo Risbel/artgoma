@@ -1,5 +1,5 @@
 export const getConfirmations = async () => {
-  const res = await fetch(`https://artworld-api.myaipeople.com/api/visits/`, {
+  const res = await fetch(`https://artgoma-api.myaipeople.com/api/visits/`, {
     next: {
       tags: ["subscriptions"],
       revalidate: 3600,

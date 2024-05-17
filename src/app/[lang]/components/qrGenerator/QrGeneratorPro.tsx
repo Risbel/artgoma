@@ -24,7 +24,7 @@ const QrGeneratorPro = ({ collaborators }: { collaborators: ICollaborator }) => 
 
   // buil URL conditionally
   const buildURL = () => {
-    let url = "https://artgoma.vercel.app";
+    let url = "https://artgoma.myaipeople.com";
 
     // Comprobar si 'colaborator' tiene un valor
     if (urlParams.collaborator) {
