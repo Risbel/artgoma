@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://artgoma.vercel.app/bg-black-logo-goma.png",
-        width: 800,
-        height: 800,
-        alt: "ArtExperience",
+        width: 600,
+        height: 600,
+        alt: "ArtGoMA",
       },
     ],
     type: "website",
