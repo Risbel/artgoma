@@ -46,7 +46,7 @@ const Video = ({
         observer.unobserve(videoRef.current);
       }
     };
-  }, []);
+  }, [videoRef]);
 
   return (
     <div className="flex-none h-[220px] md:h-[350px] w-full">
@@ -54,6 +54,7 @@ const Video = ({
         <div className="flex justify-center items-center relative h-full w-full">
           <video
             ref={videoRef}
+            muted={true}
             className="h-full w-full object-cover z-[200]"
             controls={false}
             loop
