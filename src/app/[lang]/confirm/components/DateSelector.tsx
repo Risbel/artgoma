@@ -1,17 +1,20 @@
 import * as React from "react";
 
-export function DateSelector({ inputRef }: { inputRef: React.RefObject<HTMLInputElement> }) {
-  const [selectedDate, setSelectedDate] = React.useState<any>();
-
+export function DateSelector({
+  inputRef,
+  selectedDate,
+  setSelectedDate,
+}: {
+  inputRef: React.RefObject<HTMLInputElement>;
+  selectedDate: any;
+  setSelectedDate: any;
+}) {
   // Función para manejar el cambio de la fecha
   const handleChangeFecha = (event: React.ChangeEvent<HTMLInputElement>) => {
     const fecha = event.target.value;
 
     setSelectedDate(fecha);
   };
-
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
 
   const isSunday = (fecha: any) => {
     const dayWeek = new Date(fecha).getDay();
