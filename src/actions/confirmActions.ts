@@ -1,6 +1,7 @@
 "use server";
 
 import { Person } from "@/app/[lang]/confirm/components/GuestsInput";
+import { revalidateTag } from "next/cache";
 
 export const addConfirmations = async (e: FormData, inputList: Person[]) => {
   const collaborator = e.get("collaborator")?.toString();
@@ -15,7 +16,7 @@ export const addConfirmations = async (e: FormData, inputList: Person[]) => {
 
   const dayWeek = new Date(date).getDay();
   if (dayWeek == 6) {
-    return { error: "date" };
+    return { status: 400, message: "error date" };
   }
 
   const newVisit = {
@@ -30,19 +31,22 @@ export const addConfirmations = async (e: FormData, inputList: Person[]) => {
     companions,
   };
 
-  try {
-    const res = await fetch(`https://artgoma-api.myaipeople.com/api/visits/`, {
-      method: "POST",
-      body: JSON.stringify(newVisit),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+  const res = await fetch(`https://artgoma-api.myaipeople.com/api/visits/`, {
+    method: "POST",
+    body: JSON.stringify(newVisit),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 
+  if (res.status === 400) {
     const response = await res.json();
-    return response;
-  } catch (error) {
-    console.log(error);
-    return { error: `There was an error: ${error}` };
+    return { status: 400, message: response.message };
   }
+
+  revalidateTag("visits");
+
+  const response = await res.json();
+
+  return response;
 };

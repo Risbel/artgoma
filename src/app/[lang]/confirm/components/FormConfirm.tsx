@@ -16,6 +16,8 @@ const FormConfirm = ({ collaborator }: { collaborator: string | undefined }) => 
   const inputRef: any = useRef<HTMLInputElement>(null);
   const { form } = useDictionary();
 
+  const [selectedDate, setSelectedDate] = useState<any>();
+
   return (
     <div className="relative z-50 flex flex-col p-4 md:p-6 rounded-xl bg-white backdrop-blur-3xl shadow-xl shadow-gray-800">
       <div className="flex flex-col w-full mb-4">
@@ -27,19 +29,18 @@ const FormConfirm = ({ collaborator }: { collaborator: string | undefined }) => 
         action={async (formData) => {
           const data = await addConfirmations(formData, inputList);
 
-          if (data.error === "date") {
+          if (data.message === "error date") {
             inputRef.current.focus();
             return;
           }
-          if (data.error) {
-            setError("Unespected error");
+          if (data.status === 400) {
+            setError(data.message);
             return;
           }
 
           setError(null);
 
           ref.current?.reset();
-          redirect("/");
         }}
         className="flex flex-col w-full"
       >
@@ -112,13 +113,13 @@ const FormConfirm = ({ collaborator }: { collaborator: string | undefined }) => 
             <label className="pl-2 text-xs text-primary" htmlFor="date">
               {form.labels.day}
             </label>
-            <DateSelector inputRef={inputRef} />
+            <DateSelector inputRef={inputRef} selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
           </div>
           <div className="flex-1">
             <label className="text-xs text-primary" htmlFor="time">
               {form.labels.time}
             </label>
-            <TimeSelector />
+            <TimeSelector selectedDate={selectedDate} />
           </div>
         </div>
 
