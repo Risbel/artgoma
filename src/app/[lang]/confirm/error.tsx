@@ -36,7 +36,6 @@ const error = () => {
 
       <div className="relative flex flex-col items-center gap-4">
         <p className="text-white text-6">Unespected server error</p>
-        <p className="text-white text-6">Please try again later</p>
         <Link className="text-white text-6 border border-red-600 bg-white/20 p-3 rounded-full" href={"/"}>
           Go home
         </Link>

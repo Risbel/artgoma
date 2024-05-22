@@ -44,6 +44,11 @@ export const addConfirmations = async (e: FormData, inputList: Person[]) => {
     return { status: 400, message: response.message };
   }
 
+  if (res.status === 404) {
+    const response = await res.json();
+    return { status: 400, message: response.detail };
+  }
+
   revalidateTag("visits");
 
   const response = await res.json();

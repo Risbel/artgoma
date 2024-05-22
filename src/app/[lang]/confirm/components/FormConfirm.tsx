@@ -8,9 +8,11 @@ import TimeSelector from "./TimeSelector";
 import { DateSelector } from "./DateSelector";
 import ButtonConfirm from "./ButtonConfirm";
 import { useDictionary } from "@/providers/DictionaryProvider";
+import { Check } from "lucide-react";
 
 const FormConfirm = ({ collaborator }: { collaborator: string | undefined }) => {
   const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
   const [inputList, setInputList] = useState<Person[]>([]);
   const ref = useRef<HTMLFormElement>(null);
   const inputRef: any = useRef<HTMLInputElement>(null);
@@ -39,8 +41,10 @@ const FormConfirm = ({ collaborator }: { collaborator: string | undefined }) => 
           }
 
           setError(null);
+          setSuccess(true);
 
           ref.current?.reset();
+          redirect("/");
         }}
         className="flex flex-col w-full"
       >
@@ -141,6 +145,11 @@ const FormConfirm = ({ collaborator }: { collaborator: string | undefined }) => 
 
         <ButtonConfirm text={form.buttons.confirm} />
         <span className="text-red-600 text-sm text-center">{error}</span>
+        {success && (
+          <span className="text-green-500 text-sm text-center">
+            Successfull <Check stroke="green" />
+          </span>
+        )}
       </form>
     </div>
   );

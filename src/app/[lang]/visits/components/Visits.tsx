@@ -33,7 +33,7 @@ const Visits = ({ visits }: { visits: ResultVisits }) => {
         <p className="text-xl">Results: {visits.count}</p>
       </div>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap justify-center md:justify-start gap-2">
         {filteredData.map((visit) => {
           return <Visit visit={visit} key={visit.id} />;
         })}

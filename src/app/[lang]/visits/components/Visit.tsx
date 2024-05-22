@@ -1,19 +1,26 @@
 import { cn } from "@/lib/utils";
 import { IVisits } from "@/queries/getVisits";
 import { Calendar, Clock, MailIcon, Phone, User2, X } from "lucide-react";
-import React from "react";
 
 const Visit = ({ visit }: { visit: IVisits }) => {
+  const visitDate = new Date(visit.date);
+  const currentDate = new Date();
+
+  const visitDateString = visitDate.toISOString().split("T")[0];
+  const currentDateString = new Date(currentDate.toISOString().split("T")[0]).toISOString().split("T")[0];
+
   return (
     <div
       className={cn(
         "flex flex-col justify-center border border-black p-2 rounded-md",
-        new Date(visit.date) < new Date() && "bg-black/10"
+        visitDateString < currentDateString && "bg-black/10"
       )}
     >
-      {new Date(visit.date) > new Date() && <p className="text-center text-blue-500 font-semibold">Pending</p>}
-      {new Date(visit.date) < new Date() && <p className="text-center text-red-500">Expired</p>}
-      {new Date(visit.date) === new Date() && <p className="text-center text-green-500 font-semibold">To use today</p>}
+      {visitDateString > currentDateString && <p className="text-center text-blue-500 font-semibold">Pending</p>}
+      {visitDateString < currentDateString && <p className="text-center text-red-500">Expired</p>}
+      {visitDateString === currentDateString && (
+        <p className="text-center text-green-500 font-semibold">To use today</p>
+      )}
       <div className="flex gap-2">
         <User2 />
         {visit.first_name} {visit.last_name}
@@ -38,7 +45,7 @@ const Visit = ({ visit }: { visit: IVisits }) => {
           </p>
         )}
       </div>
-      <div>
+      <div className="flex gap-2 flex-wrap">
         {visit.companions.length > 0 && <p className="font-semibold">Companions:</p>}
         <ul className="flex gap-2 flex-wrap">
           {visit.companions.map((companion) => {
