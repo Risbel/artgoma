@@ -1,0 +1,76 @@
+{
+  "imagesArtists": [
+    {
+      "url": "/img-carousel-artist-01.avif",
+      "alt": "carousel image Victor Ezquerro",
+      "key": "image 1",
+      "width": 320,
+      "height": 420,
+      "artistName": "Victor Ezquerro"
+    },
+    {
+      "url": "/img-carousel-artist-02.avif",
+      "alt": "carousel image Juan Carlos",
+      "key": "image 2",
+      "width": 320,
+      "height": 420,
+      "artistName": "Juan Carlos"
+    },
+    {
+      "url": "/img-carousel-artist-03.avif",
+      "alt": "carousel image Conrado",
+      "key": "image 3",
+      "width": 320,
+      "height": 420,
+      "artistName": "Conrado"
+    },
+    {
+      "url": "/img-carousel-artist-04.avif",
+      "alt": "carousel image Diaconescu",
+      "key": "image 4",
+      "width": 320,
+      "height": 420,
+      "artistName": "Diaconescu"
+    },
+    {
+      "url": "/img-carousel-artist-05.avif",
+      "alt": "carousel image Ariam",
+      "key": "image 5",
+      "width": 320,
+      "height": 420,
+      "artistName": "Ariam"
+    },
+    {
+      "url": "/img-carousel-artist-06.avif",
+      "alt": "carousel image Tosco",
+      "key": "image 6",
+      "width": 320,
+      "height": 420,
+      "artistName": "Tosco"
+    },
+    {
+      "url": "/img-carousel-artist-07.avif",
+      "alt": "carousel image Ungureanu",
+      "key": "image 7",
+      "width": 320,
+      "height": 420,
+      "artistName": "Ungureanu"
+    },
+    {
+      "url": "/img-carousel-artist-08.avif",
+      "alt": "carousel image Juan Hernández",
+      "key": "image 8",
+      "width": 320,
+      "height": 420,
+      "artistName": "Juan Hernández"
+    },
+    {
+      "url": "/img-carousel-artist-09.avif",
+      "alt": "carousel image Petru",
+      "key": "image 9",
+      "width": 320,
+      "height": 420,
+      "artistName": "Petru"
+    }
+  ]
+}

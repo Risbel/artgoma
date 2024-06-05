@@ -12,6 +12,7 @@ import GetInspired from "./components/sections/getInspired";
 import Hero from "./components/sections/hero";
 import Location from "./components/sections/location";
 import LogoCarousel from "./components/carousel";
+import ArtistsCarousel from "./components/carousel2/ArtistsCarousel";
 
 const Home = ({ params: { lang } }: { params: { lang: Locale } }) => {
   return (
@@ -22,10 +23,8 @@ const Home = ({ params: { lang } }: { params: { lang: Locale } }) => {
         </div>
         <DropdownNav />
       </div>
-
       <Navbar lang={lang} />
       <div className="hidden md:block fixed z-[190] h-14 w-3/4 right-0 backdrop-blur-sm bg-gradient-to-l from-black via-black to-transparent rounded-l-full overflow-hidden"></div>
-
       <Hero lang={lang} />
       <Carousel />
       <Connect lang={lang} />
@@ -42,6 +41,7 @@ const Home = ({ params: { lang } }: { params: { lang: Locale } }) => {
       <Carousel2 />
       <LogoCarousel />
       <GetInspired lang={lang} />
+      <ArtistsCarousel />
       <Location lang={lang} />
       <GetInTouch lang={lang} />
       <Footer />

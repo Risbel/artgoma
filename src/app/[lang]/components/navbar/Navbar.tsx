@@ -8,7 +8,7 @@ const Navbar = async ({ lang }: { lang: Locale }) => {
   const { navbar } = await getDictionary(lang);
 
   return (
-    <nav className="hidden md:flex fixed z-[200] md:right-16 lg:right-32 top-4">
+    <nav className="hidden md:flex fixed z-[200] md:right-16 top-4">
       <div className="flex gap-6 items-center">
         <NavbarDropdown />
         <Link href="#enjoy-live">
