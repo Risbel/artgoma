@@ -2,7 +2,7 @@
   "images": [
     {
       "video": true,
-      "url": "https://minio.myaipeople.com/api/v1/buckets/artgoma-landing/objects/download?preview=true&prefix=dmlkZW9DYXJvdXNlbDEzLm1wNA==&version_id=null",
+      "url": "https://minio.myaipeople.com/api/v1/buckets/artgoma-landing/objects/download?preview=true&prefix=videoCarousel14.mp4&version_id=null",
       "alt": "video 1",
       "key": "video 1",
       "width": 600,
@@ -31,7 +31,7 @@
     },
     {
       "video": true,
-      "url": " https://minio.myaipeople.com/api/v1/buckets/artgoma-landing/objects/download?preview=true&prefix=dmlkZW9DYXJvdXNlbDE0Lm1wNA==&version_id=null",
+      "url": "https://minio.myaipeople.com/api/v1/buckets/artgoma-landing/objects/download?preview=true&prefix=videoCarousel13.mp4&version_id=null",
       "alt": "video 2",
       "key": "video 2",
       "width": 600,
